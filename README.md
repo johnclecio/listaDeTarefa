@@ -1,6 +1,6 @@
 # Projetos JavaScript do John Lima
 
-Bem-vindo ao meu repositório! Aqui você encontra dois projetos que desenvolvi em JavaScript: um sistema de controle de gastos e um jogo de adivinhação.
+Bem-vindo ao meu repositório! Aqui você encontra projetos que desenvolvi em JavaScript com foco em lógica de programação e Programação Orientada a Objetos.
 
 ---
 
@@ -14,7 +14,7 @@ Um sistema simples para registrar despesas e receitas, ajudando a controlar o or
 - Exibir saldo atual.
 - Listar histórico de transações.
 
-🔗 [Acesse o projeto Controle de Gastos](./controle-de-gastos/)
+
 
 ---
 
@@ -29,7 +29,20 @@ Um jogo interativo onde o jogador deve adivinhar um número secreto entre 1 e 10
 - Indicação se o número secreto é maior ou menor.
 - Botão de reiniciar o jogo quando termina.
 
-🔗 [Acesse o projeto Jogo da Adivinhação](./adivinhacao/)
+
+
+---
+
+### 3. Sistema de Veículos (POO)
+Projeto focado em Programação Orientada a Objetos (POO) utilizando JavaScript.
+
+**Funcionalidades:**
+- Classe base `Veiculo`.
+- Herança aplicada nas classes `Carro` e `Moto`.
+- Encapsulamento do estado do veículo (ligado/desligado).
+- Métodos específicos para cada tipo de veículo.
+
+
 
 ---
 
