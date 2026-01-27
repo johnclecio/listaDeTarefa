@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/script.js" defer></script>
+    <title>Jogo de Adivinhação</title>
+</head>
+<body>
+    <section>
+        <div id="boneco">
+            <div id="cabeca" class="parte cabeca"></div>
+            <div id="corpo" class="parte corpo"></div>
+            <div id="braco-esq" class="parte braco-esq"></div>
+            <div id="braco-dir" class="parte braco-dir"></div>
+            <div id="perna-esq" class="parte perna-esq"></div>
+            <div id="perna-dir" class="parte perna-dir"></div>
+            <div id="olho-esq" class="parte olho-esq"></div>
+            <div id="olho-dir" class="parte olho-dir"></div>
+            <div id="boca" class="parte boca"></div>
+            <div id="chapeu" class="parte chapeu"></div>
+        </div>
+    </section>
+    <main>
+        <h1>Vamos Jogar?</h1>
+        <p>
+        <span>Bem-vindo ao Jogo de Adivinhação!</span> 
+        Neste jogo, o computador escolhe um número secreto,
+        e o seu desafio é descobrir qual é esse número entre 1 e 100.
+        </p>
+        <p id="dicas"></p>
+        <input type="number" id="numberDigitado" placeholder="Digite Aqui">
+
+        <button id="btnChutar" onclick="chutar()">Chutar</button>
+
+        <button id="btnRefresh" onclick="reiniciarJogo()" style="display: none;">
+            🔄 Reiniciar
+        </button>
+
+
+
+    </main>
+    
+</body>
+</html>

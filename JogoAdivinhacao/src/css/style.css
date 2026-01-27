@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    max-width: 350px;
+    
+    background: #fff;
+    padding: 20px;
+    width: 320px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+}
+
+button {
+    padding: 8px;
+    font-size: 14px;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+p{
+    text-align: justify;
+}
+section{
+    border: solid 1px black;
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+#boneco {
+    position: relative;
+    width: 120px;
+    height: 200px;
+    margin: 20px auto;
+}
+
+.parte {
+    position: absolute;
+    background: #000;
+    display: none;
+}
+
+/* Cabeça */
+.cabeca {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 0;
+    left: 40px;
+}
+
+/* Corpo */
+.corpo {
+    width: 6px;
+    height: 60px;
+    top: 40px;
+    left: 57px;
+}
+
+/* Braços */
+.braco-esq {
+    width: 40px;
+    height: 6px;
+    top: 55px;
+    left: 17px;
+}
+
+.braco-dir {
+    width: 40px;
+    height: 6px;
+    top: 55px;
+    left: 60px;
+}
+
+/* Pernas */
+.perna-esq {
+    width: 6px;
+    height: 40px;
+    top: 100px;
+    left: 50px;
+}
+
+.perna-dir {
+    width: 6px;
+    height: 40px;
+    top: 100px;
+    left: 64px;
+}
+
+/* Olhos */
+.olho-esq,
+.olho-dir {
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    top: 12px;
+}
+
+.olho-esq {
+    left: 48px;
+}
+
+.olho-dir {
+    left: 62px;
+}
+
+/* Boca */
+.boca {
+    background: #fff;
+    width: 16px;
+    height: 4px;
+    top: 26px;
+    left: 52px;
+}
+
+/* Chapéu */
+.chapeu {
+    width: 50px;
+    height: 6px;
+    top: -6px;
+    left: 35px;
+}
+
+.chapeu::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 12px;
+    background: #000;
+    top: -12px;
+    left: 10px;
+}
+#btnRefresh {
+    display: none;
+}
+
