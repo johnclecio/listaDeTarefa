@@ -45,7 +45,23 @@ Projeto focado em Programação Orientada a Objetos (POO) utilizando JavaScript.
 
 ___
 
-###4.
+### 4. Caixa Eletrônica 24 Horas
+
+Aplicação simples que simula o funcionamento de um caixa eletrônico,
+permitindo realizar depósitos e saques, com controle de saldo,
+desenvolvida em JavaScript utilizando Programação Orientada a Objetos (POO).
+
+**Funcionalidades:**
+
+Exibição do saldo atual
+
+Depósito de valores na conta
+
+Saque de valores, com verificação de saldo disponível
+
+Mensagem de saldo insuficiente quando o valor do saque excede o saldo
+
+Atualização dinâmica do saldo na interface
 
 ---
 
@@ -53,7 +69,7 @@ ___
 
 Aplicação simples e interativa que simula o funcionamento de um parquímetro, desenvolvida com JavaScript orientado a objetos (POO). O usuário informa um valor e o sistema calcula o tempo de permanência e o troco, quando aplicável.
 
-##Funcionalidades
+**Funcionalidades:**
 
 Recebe um valor inserido pelo usuário
 
