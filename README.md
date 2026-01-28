@@ -43,8 +43,26 @@ Projeto focado em Programação Orientada a Objetos (POO) utilizando JavaScript.
 - Métodos específicos para cada tipo de veículo.
 
 
+___
+
+###4.
 
 ---
+
+### 5. John Parking – Parquímetro em JavaScript
+
+Aplicação simples e interativa que simula o funcionamento de um parquímetro, desenvolvida com JavaScript orientado a objetos (POO). O usuário informa um valor e o sistema calcula o tempo de permanência e o troco, quando aplicável.
+
+##Funcionalidades
+
+Recebe um valor inserido pelo usuário
+
+Calcula o tempo de estacionamento com base na tabela de preços
+
+Exibe o troco, se houver
+
+Mostra a mensagem “Valor insuficiente” para valores menores que R$ 1,00
+
 
 ## Tecnologias Utilizadas
 - HTML
