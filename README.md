@@ -119,6 +119,7 @@ Layout simples e responsivo
 - CSS3
 - JavaScript (ES6+)
 - API ViaCEP
+- LocalStorage
 
 ---
 
