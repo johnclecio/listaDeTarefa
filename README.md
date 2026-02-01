@@ -87,7 +87,7 @@ Projeto simples em HTML, CSS e JavaScript que realiza a integração com a
 API ViaCEP para auto preenchimento de endereço a partir do CEP informado pelo usuário.
 
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - Consulta de CEP utilizando a API pública **ViaCEP**
 - Preenchimento automático dos campos:
@@ -100,9 +100,20 @@ API ViaCEP para auto preenchimento de endereço a partir do CEP informado pelo u
 - Requisição feita via `fetch`
 
 
+### 7. Blog com Dark/Light Mode
+Projeto simples de um blog em HTML, CSS e JavaScript com funcionalidade de alternância de tema (Dark / Light), incluindo persistência do tema usando LocalStorage.
+
+## Funcionalidades
+Alternância entre tema claro e escuro
+Botão fixo no canto direito da tela
+Ícone dinâmico (🌙 / ☀️) conforme o tema
+Tema salvo no navegador (LocalStorage)
+Layout simples e responsivo
 
 
-## 🛠️ Tecnologias Utilizadas
+
+
+##  Tecnologias Utilizadas
 
 - HTML5
 - CSS3
