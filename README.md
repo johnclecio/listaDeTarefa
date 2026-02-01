@@ -80,10 +80,34 @@ Exibe o troco, se houver
 Mostra a mensagem “Valor insuficiente” para valores menores que R$ 1,00
 
 
-## Tecnologias Utilizadas
-- HTML
-- CSS
-- JavaScript
+---
+
+### 6. Consulta de CEP com ViaCEP
+Projeto simples em HTML, CSS e JavaScript que realiza a integração com a 
+API ViaCEP para auto preenchimento de endereço a partir do CEP informado pelo usuário.
+
+
+## 🚀 Funcionalidades
+
+- Consulta de CEP utilizando a API pública **ViaCEP**
+- Preenchimento automático dos campos:
+  - Logradouro
+  - Bairro
+  - Cidade
+  - Estado
+- Validação básica do CEP (8 dígitos)
+- Mensagem de erro para CEP inexistente
+- Requisição feita via `fetch`
+
+
+
+
+## 🛠️ Tecnologias Utilizadas
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- API ViaCEP
 
 ---
 
