@@ -32,6 +32,7 @@ class CaixaEletronica{
     }
     sacar(){
         const valorSaque = parseFloat(document.getElementById("valorSaque").value);
+        
 
         if(this.conta.temSaldoParaSacar(valorSaque)){
             this.conta.sacar(valorSaque);
