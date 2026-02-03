@@ -1,7 +1,7 @@
 
 
 
-const arrayForm = ['cep', 'logradouro', 'bairro', 'cidade', 'estado', 'numero'];
+const arrayForm = ['nome', 'sobreNome', 'email','cep', 'logradouro', 'bairro', 'cidade', 'estado', 'numero'];
 
 
 const salvarTudo = () => {
