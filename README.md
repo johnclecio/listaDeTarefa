@@ -110,6 +110,24 @@ Botão fixo no canto direito da tela
 Tema salvo no navegador (LocalStorage)
 Layout simples e responsivo
 
+---
+### 8. Cadastro de Clientes
+
+## 📋 Descrição
+
+Aplicação web simples para **cadastro de clientes**, permitindo adicionar, listar e remover clientes utilizando **HTML, CSS e JavaScript puro**, com persistência de dados via **API CrudCrud**.
+
+O projeto foi desenvolvido com foco em aprendizado de **requisições HTTP (CRUD)** e manipulação do DOM.
+
+---
+
+## 🚀 Funcionalidades
+
+* ➕ Cadastrar cliente (nome e e-mail)
+* 📄 Listar clientes cadastrados
+* ❌ Remover cliente
+* 💾 Dados armazenados em API externa (CrudCrud)
+
 
 
 
@@ -118,7 +136,7 @@ Layout simples e responsivo
 - HTML5
 - CSS3
 - JavaScript (ES6+)
-- API ViaCEP
+- API ViaCEP + API CrudCrud
 - LocalStorage
 
 ---
