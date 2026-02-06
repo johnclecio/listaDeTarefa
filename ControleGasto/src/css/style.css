@@ -54,6 +54,11 @@ button:hover {
 }
 
 p {
-    margin: 5px 0;
+    text-align: justify;
+    margin-block: 5px;
+    padding: 8px 10px;
     font-size: 14px;
+    border: solid 1px red;
+    border-radius: 5px;
+
 }
