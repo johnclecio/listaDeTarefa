@@ -26,8 +26,10 @@ Projeto simples de **controle de gastos por categoria**, desenvolvido com **HTML
 ## 📂 Estrutura do projeto
 
     listaDeTarefa/
-    ├── controle-gastos.html
     ├── index.html
-    ├── style.css
-    ├── script.js
+    ├── src/
+         └──js/
+           └── script.js
+         ├──css/
+            └── style.css
     └── README.md
