@@ -1,6 +1,6 @@
 
 
-class ContaBancaria{
+export class ContaBancaria{
     #saldo
     constructor(){
         this.#saldo = 0;
@@ -24,7 +24,7 @@ class ContaBancaria{
     }
 }
 
-class CaixaEletronica{
+ export class CaixaEletronica{
 
     constructor(conta){
         this.conta = conta;
@@ -61,6 +61,3 @@ class CaixaEletronica{
 
     
 }
-const conta = new ContaBancaria();
-const caixaEletronica = new CaixaEletronica(conta);
-
