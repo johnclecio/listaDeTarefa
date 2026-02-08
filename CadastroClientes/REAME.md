@@ -48,3 +48,5 @@ Cada cliente possui um **ID único gerado automaticamente pelo Firestore**.
     │   └── style.css
     └── js
         └── script.js
+
+## John Lima
