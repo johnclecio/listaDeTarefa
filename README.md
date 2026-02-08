@@ -115,18 +115,20 @@ Layout simples e responsivo
 
 ## 📋 Descrição
 
-Aplicação web simples para **cadastro de clientes**, permitindo adicionar, listar e remover clientes utilizando **HTML, CSS e JavaScript puro**, com persistência de dados via **API CrudCrud**.
+Aplicação web simples para **cadastro de clientes**, permitindo adicionar, listar e remover clientes utilizando **HTML, CSS e JavaScript puro**, com persistência de dados através do **Firebase Firestore**.
 
-O projeto foi desenvolvido com foco em aprendizado de **requisições HTTP (CRUD)** e manipulação do DOM.
+O projeto foi desenvolvido com foco no aprendizado de **manipulação do DOM**, **uso do Firebase no front-end** e **operações CRUD**.
 
 ---
 
 ## 🚀 Funcionalidades
 
-* ➕ Cadastrar cliente (nome e e-mail)
-* 📄 Listar clientes cadastrados
-* ❌ Remover cliente
-* 💾 Dados armazenados em API externa (CrudCrud)
+- ➕ Cadastrar cliente (nome e e-mail)
+- 📄 Listar clientes cadastrados
+- ❌ Remover cliente
+- 💾 Dados persistidos no Firebase Firestore
+
+---
 
 
 
