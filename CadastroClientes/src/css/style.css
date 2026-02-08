@@ -15,7 +15,7 @@ main{
     display: block;
     justify-content: center;
     align-items: center;
-    width: auto;
+    width: 600px;
     height: max-content;
     background: #fff;
     text-align: center;
@@ -23,8 +23,20 @@ main{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     
 }
+
+
+label {
+    width: 50px;
+    
+}
+
+form > label,
+form > input {
+    display: inline-block;
+}
+
 input{
-    width: 80%;
+    width: 85%;
     margin-block: 5px;
     padding: 6px;
 }
