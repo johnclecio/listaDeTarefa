@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: #8b5a2b;
+
 }
 .menu-toggle{
     display: none;
@@ -12,7 +14,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
         "header nav nav nav"
-        "main main main main"
+        "section main main aside"
         "footer footer footer footer";
     min-height: 100vh;
 }
@@ -28,10 +30,47 @@ nav {
     margin-top: 50px;
 }
 
+
 main { 
     grid-area: main; 
     text-align: center; 
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.agencia{
+    width: 90%;
+    border-radius: 25%;
+}
+h2,h3,h4{
+    margin-block: 20px;
+}
+p{
+    text-align: justify;
+}
+.lista-valores, .lista-filosofia, .lista-servicos {
+    list-style: none;
+}
+
+
+
+
+.lista-servicos li, .lista-filosofia li, .lista-valores li {
+    background: linear-gradient(90deg, #111, #1e1e1e);
+    color: #fff;
+    padding: 14px 20px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border-left: 5px solid #00adb5;
+    transition: 0.3s ease;
+}
+
+.lista-servicos li:hover, .lista-filosofia  li:hover, .lista-valores li:hover {
+    transform: translateX(8px);
+    background: #00adb5;
+}
+
+
+
 
 footer { 
     grid-area: footer; 
@@ -59,6 +98,8 @@ nav a {
             "header"
             "nav"
             "main"
+            "sidebar"
+            "aside"
             "footer";
     }
     
@@ -100,8 +141,8 @@ nav {
         width: 100%;
         background: white;
         z-index: 1000;
+        margin-left: 5px;
         margin-top: 0; /* remove aquele margin-top:50px */
-        padding: 10px 0;
     }
 
     /* Evita que o conteúdo fique atrás do menu */
@@ -115,13 +156,29 @@ nav {
         align-items: center;
     }
 
-    nav ul.active {
-        display: flex;
-        position: absolute;
-        top: 60px; /* altura do nav */
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 20px 0;
-    }
+   nav ul.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: 0;              /* Agora fica do lado direito */
+    
+    width: 80%;          /* Largura fixa mais elegante */
+    height: 100vh;
+
+    padding: 40px 20px;
+
+    background: linear-gradient(180deg, #1f4037, #99f2c8); /* Gradiente bonito */
+    
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.4); /* Sombra lateral */
+    
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    transition: transform 0.3s ease-in-out;
+}
+
 }
