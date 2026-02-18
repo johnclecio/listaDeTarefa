@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu-toggle{
+    display: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header nav nav nav"
+        "main main main main"
+        "footer footer footer footer";
+    min-height: 100vh;
+}
+
+header { 
+    grid-area: header; 
+    text-align: center; 
+    
+}
+
+nav { 
+    grid-area: nav; 
+    margin-top: 50px;
+}
+
+main { 
+    grid-area: main; 
+    text-align: center; 
+}
+
+footer { 
+    grid-area: footer; 
+    text-align: center; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MOBILE */
+@media screen and (max-width: 738px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+    
+    
+    
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.navbar-menu{
+     display: inline-block;
+     cursor: pointer;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        z-index: 1000;
+        margin-top: 0; /* remove aquele margin-top:50px */
+        padding: 10px 0;
+    }
+
+    /* Evita que o conteúdo fique atrás do menu */
+    header {
+        margin-top: 60px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.active {
+        display: flex;
+        position: absolute;
+        top: 60px; /* altura do nav */
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+    }
+}
