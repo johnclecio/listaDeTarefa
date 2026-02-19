@@ -8,31 +8,53 @@
     <title>Agência Criativa Web</title>
 </head>
 <body>
-    <div class="container">
+    <!-- Container principal que organiza o layout em Grid -->
+
+    <div class="container" id="home">
+        <!-- Cabeçalho do site contendo a logo -->
+
         <header>
-            <img src="src/img/logo.png" alt="img-logo">
+            <div class="logo">
+                Criativa <span>Web</span>
+            </div>
         </header>
        <nav>
+            <!-- Menu de navegação principal com links internos -->
+
             <div class="navbar-menu" onclick="toggleMenu(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
             <ul class="menu">
-                <li><a href="">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Depoimentos</a></li>
-                <li><a href="">Contato</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#depoimento">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
        </nav>
-       <aside></aside>
-        <main>
-            <img class="agencia" src="src/img/agencia.png" alt="imagem-da-agencia">
-            <h2 id="sobre">Agência de Criatividade Web</h2>
+       
+       <!-- Conteúdo principal do site (história e informações da empresa) -->
+
+    <main>
+            <!-- Imagem responsiva utilizando srcset para mobile, tablet e desktop -->
+
+            <img 
+                    class="agencia"
+                    src="src/img/web-desktop.png"
+                    srcset="
+                        src/img/web-mobile.png 400w,
+                        src/img/web-tablet.png 800w,
+                        src/img/web-desktop.png 1200w
+                    "
+                    sizes="(max-width: 768px) 100vw, 1200px"
+                    alt="Fachada da Agência Criativa Web">
+
+            <h2 id="sobre">Agência de Criativa Web</h2>
             <h3>Nossa História – Pacatuba, Ceará</h3>
             <p>
-                Fundada no coração de Pacatuba, a Agência de Criatividade Web nasceu de um sonho simples:
+                Fundada no coração de Pacatuba, a Agência de Criativa Web nasceu de um sonho simples:
                 provar que grandes ideias não precisam nascer nas capitais — elas podem surgir de qualquer 
                 lugar, inclusive do interior do Ceará.
             </p>
@@ -80,7 +102,7 @@
             </p>
             <h3>Hoje</h3>
             <p>
-                Hoje, a Agência de Criatividade Web atende clientes em todo o Brasil, mantendo sua essência em Pacatuba.
+                Hoje, a Agência de Criativa Web atende clientes em todo o Brasil, mantendo sua essência em Pacatuba.
             </p>
            <h4>Somos uma empresa que valoriza:</h4>
 
@@ -91,12 +113,88 @@
                 <li>Crescimento sustentável</li>
             </ul>
             
-        </main>
+    </main>
+
+    <!-- Seção de serviços oferecidos pela agência -->
+    <section id="servicos">
+            <h3>Nossos Serviços</h3>
+
+            <div class="servico">
+                <h4>Desenvolvimento de Sites</h4>
+                <p>Criamos sites modernos, rápidos e responsivos, pensados para gerar autoridade e atrair clientes.</p>
+            </div>
+
+            <div class="servico">
+                <h4>Landing Pages</h4>
+                <p>Páginas estratégicas focadas em transformar visitantes em clientes.</p>
+            </div>
+
+            <div class="servico">
+                <h4>Identidade Visual</h4>
+                <p>Construímos marcas fortes e memoráveis para seu negócio.</p>
+            </div>
+
+            <div class="servico">
+                <h4>Tráfego Pago</h4>
+                <p>Campanhas estratégicas para atrair clientes qualificados.</p>
+            </div>
+
+            <div class="servico">
+                <h4>Sistemas Web</h4>
+                <p>Soluções digitais personalizadas para automatizar processos.</p>
+            </div>
+   </section>
+
+    <!-- Área lateral contendo depoimentos de clientes -->
+    <aside class="depoimentos" id="depoimento">
+            <h3>Depoimentos</h3>
+
+            <div class="card-depoimento">
+                <p>"A Criativa Web transformou totalmente a presença digital da nossa empresa. Atendimento excelente e resultado rápido."</p>
+                <span>- Carlos Silva, Empresário</span>
+            </div>
+
+            <div class="card-depoimento">
+                <p>"Nosso site ficou moderno e começamos a receber muito mais contatos pelo WhatsApp."</p>
+                <span>- Mariana Souza, Loja Local</span>
+            </div>
+
+            <div class="card-depoimento">
+                <p>"Profissionais criativos, comprometidos e estratégicos. Recomendo demais!"</p>
+                <span>- João Mendes, Consultor</span>
+            </div>
+    </aside>
 
 
-        
-        <footer>
-            <p>© 2026 - Meu Site</p>
+        <!-- Rodapé com informações de contato e formulário -->
+        <footer id="contato">
+            <h2>Informações para Contatos</h2>
+            <div class="endereco">
+                <p>Rua Atriz Nº 101</p>
+                <p>Centro - Pacatuba - CE</p>
+                <p>Telefone:(85)9-01020304</p>
+                <p>Email: contato@criativaweb.com.br</p>
+
+            </div>
+
+            <!-- Formulário para envio de mensagem -->
+           <form>
+                <h2>Deixe sua mensagem</h2>
+
+                <label for="nome">Nome:</label>
+                <input type="text"  id="nome">
+
+                <label for="email">Email:</label>
+                <input type="email"  id="email">
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem"></textarea>
+
+
+                <button type="submit">Enviar</button>
+           </form>
+            <!-- Direitos autorais do site -->
+            <p>© 2026 - John Lima</p>
         </footer>
         
 
