@@ -6,18 +6,17 @@
     
 
 }
-
-/* Suaviza a rolagem ao clicar nos links internos */
-html {
-    scroll-behavior: smooth;
+html, body {
+    width: 100%;
+    overflow-x: hidden;
 }
+
 
 /* Fundo principal do site com gradiente */
 body {
     background: linear-gradient(135deg, #8b5a2b, #5c3a21);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
-
 
 /* Layout principal utilizando CSS Grid */
 .container {
@@ -34,101 +33,100 @@ body {
     padding-inline: 20px;
 }
 
-/* Definição das áreas do Grid */
-section { grid-area: section; }
-
-aside { grid-area: aside; }
-footer { grid-area: footer; }
+.container__header { grid-area: header; }
+.container__main   { grid-area: main; }
+.container__section{ grid-area: section; }
+.container__aside  { grid-area: aside; }
+.container__footer { grid-area: footer; }
 
 /* Estilização do cabeçalho */
-header {
-    grid-area: header;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 2rem auto;
-    max-width: 1200px;
-    width: 90%;
-    padding: 1rem 2rem;
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem ;
 }
 
-/* Estilo da logo */
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 2px;
+.header__logo {
+  font-size: 1.9rem;
+  margin-left: 30px;
+  font-weight: 700;
 }
 
-.logo span {
-    color: #00adb5;
+.header__highlight {
+  color: #00adb5;
 }
-
-.menu-toggle{
+/* javaScript menu*/
+.nav__menu {
     display: none;
+    background: none;
+    border: none;
 }
+
 
 /* Barra de navegação fixa no topo */
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: #8b5a2b;
-    z-index: 1000;
-}
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s ease;
+.container__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  background: #8b5a2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-nav a:hover {
-    color: #00adb5;
+.nav__list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
 }
 
-/* Lista de links do menu */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
+.nav__link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: #00adb5;
 }
 
 /* Área principal de conteúdo */
-main { 
-    grid-area: main; 
+.container__main { 
     text-align: center; 
     font-size: 1rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
 
+
 /* Imagem responsiva da agência */
-.agencia {
+.main__img {
     max-width: 100%;
     height: auto;
     border-radius: 20px;
 }
-#sobre{
-    padding-top: 80px;
+.main__title{
+    padding-top: 100px;
 }
-h2,h3,h4{
+.main__title--sub{
     margin-block: 20px;
 }
-p{
+.main__text{
     text-align: justify;
 }
 
 /* Estilização das listas de serviços, filosofia e valores */
-.lista-valores, .lista-filosofia, .lista-servicos {
+.main__lista-valores, .main__lista-filosofia, .main__lista-servicos {
     list-style: none;
 }
 
 /* Itens das listas com efeito visual */
-.lista-servicos li, .lista-filosofia li, .lista-valores li {
+.main__item {
     background: linear-gradient(90deg, #111, #1e1e1e);
     color: #fff;
     padding: 14px 20px;
@@ -138,13 +136,15 @@ p{
     transition: 0.3s ease;
 }
 
-.lista-servicos li:hover, .lista-filosofia  li:hover, .lista-valores li:hover {
+.main__item:hover  {
     transform: translateX(8px);
     background: #00adb5;
 }
 
+/* Definição das áreas do Grid */
+
 /* Blocos laterais com fundo e bordas */
-section,   aside{
+.container__section,   .container__aside{
 
     background: #5c3a21;
     color: #fff;
@@ -152,25 +152,36 @@ section,   aside{
     border-radius: 15px;
     text-align: center;
     padding: 30px;
-
+   
 }
-#servicos h3, .depoimentos h3{
-    padding-top: 50px;
-}
-.servico{
+/* section e aside*/
+.section__servico{
     padding: 20px;
     text-align: center;
+    
+}  
+
+.section__title, .aside__title {
+    margin-block: 40px;
+    font-size: 1.5rem;
+    
+    
+    
+} 
+.section__title--sub{
+    font-size: 1rem;
+    text-align: center;
+} 
+.section__text, .aside__text{
+    margin-top: 10px;
+    font-size: 0.9rem;
+    text-align: justify;
     
 }
 
 
-.depoimentos h3 , #servicos h3{
-    margin-bottom: 40px;
-    font-size: 1.5rem;
-}
-
 /* Cartões de depoimentos */
-.card-depoimento {
+.aside__card {
     background: #111;
     padding: 25px;
     margin: 20px auto;
@@ -180,12 +191,12 @@ section,   aside{
     transition: 0.3s ease;
 }
 
-.card-depoimento:hover {
+.aside__card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
-.card-depoimento span {
+.aside__author {
     display: block;
     margin-top: 15px;
     font-weight: bold;
@@ -193,46 +204,33 @@ section,   aside{
 }
 
 /* Rodapé do site */
-footer { 
-    grid-area: footer; 
-    text-align: center; 
-    padding: 60px 20px;
-}
-
-
 /* Estilização do formulário de contato */
-#contato {
+.container__footer { 
+    text-align: center; 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 60px 20px;
 }
-.endereco{
-    text-align: justify;
-}
-label{
-    display: block;
-    margin-block: 10px;
+
+
+.footer__form {
+    width: 100%;
+    max-width: 500px;
 }
 
-#contato input,
-#contato textarea,
-#contato button {
-    width: 90%;
+.footer__form--input,
+.footer__form--textarea,
+.footer__form--button {
+    width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    box-sizing: border-box;
     border-radius: 8px;
     border: none;
 }
 
-#contato input,
-#contato textarea {
-    background: #f4f4f4;
-}
-
-#contato button {
+.footer__form--button {
     background-color: #00adb5;
     color: white;
     font-size: 14px;
@@ -241,7 +239,7 @@ label{
 }
 
 /* Botão do formulário com efeito hover */
-#contato button:hover {
+.footer__form--button:hover {
     background-color: #007f86;
     transform: scale(1.03);
 }
@@ -261,80 +259,66 @@ label{
 
     
 
-    nav {
-        position: fixed;
-        top: 0;
+    .container__nav {
+        position: fixed; 
+        top: 0; 
         left: 0;
         width: 100%;
         background: #8b5a2b;
-        z-index: 1000;
+        z-index: 1000; 
     }
-
-
-    nav ul {
-        list-style: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 80%;
-        height: 100vh;
-        padding: 60px 20px;
-        background: linear-gradient(180deg, #1f4037, #99f2c8);
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
+    .nav__list {
+        list-style: none; 
+        position: fixed; 
+        top: 0; 
+        right: 0; 
+        width: 80%; 
+        height: 100vh; 
+        padding: 60px 20px; 
+        background: linear-gradient(180deg, #1f4037, #99f2c8); 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 20px; transform: translateX(100%); transition: transform 0.3s ease, background-color 0.3s ease; 
     }
-
-    nav ul.active {
+    .nav__list.active { 
         transform: translateX(0);
-    }
-
-    /* Ícone do menu hambúrguer animado */
-    .navbar-menu {
-        position: fixed;
-        top: 15px;
-        right: 20px;
-        display: inline-block;
-        cursor: pointer;
-        z-index: 2000;
-    }
-
-    .bar1, .bar2, .bar3 {
-        width: 35px;
-        height: 5px;
-        background-color: #fff;
-        margin: 6px 0;
-        transition: 0.4s;
-    }
-
-    .change .bar1 {
-        transform: translateY(11px) rotate(-45deg);
-    }
-
-    .change .bar2 {
-        opacity: 0;
-    }
-
-    .change .bar3 {
-        transform: translateY(-11px) rotate(45deg);
-    }
-
-    .navbar-menu.change {
-        right: auto;
-        left: 20px;
-    }
-    
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-   main {
-        width: 90%;
-        justify-self: center;
-    }
-
+     }
+     /* Ícone do menu hambúrguer animado */ 
+     .nav__menu {
+         position: fixed;
+         top: 15px; 
+         right: 20px; 
+         display: inline-block; 
+         cursor: pointer; 
+         z-index: 2000; }
 }
+
+   .nav__bar1, .nav__bar2, .nav__bar3 {
+     width: 35px; 
+     height: 5px; 
+     background-color: #fff; 
+     margin: 6px 0; 
+     transition: 0.4s; 
+    } 
+    .change .nav__bar1 { 
+    transform: translateY(11px) rotate(-45deg); 
+}   
+    .change .nav__bar2 {
+     opacity: 0; } 
+
+    .change .nav__bar3 {
+     transform: translateY(-11px) rotate(45deg); } 
+
+    .nav__menu.change { 
+    right: auto; 
+    left: 20px; } 
+
+   .container__header {
+    text-align: center;
+}
+     
+    .container__main { 
+    width: 90%; 
+    justify-self: center; 
+}
+

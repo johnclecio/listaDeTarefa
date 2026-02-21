@@ -3,45 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agência Criativa Web em Pacatuba especializada em sites, landing pages e marketing digital.">
     <link rel="stylesheet" href="src/css/estilos.css">
-    <script src="src/js/script.js"></script>
+    <script src="src/js/script.js" defer></script>
     <title>Agência Criativa Web</title>
 </head>
 <body>
     <!-- Container principal que organiza o layout em Grid -->
 
-    <div class="container" id="home">
+    <div class="container">
         <!-- Cabeçalho do site contendo a logo -->
 
-        <header>
-            <div class="logo">
-                Criativa <span>Web</span>
+        <header class="container__header home">
+            <div class="header__logo">
+                Criativa <span class="header__highlight">Web</span>
             </div>
         </header>
-       <nav>
+       <nav class="container__nav nav">
             <!-- Menu de navegação principal com links internos -->
 
-            <div class="navbar-menu" onclick="toggleMenu(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+            <div class="nav__menu" onclick="toggleMenu(this)">
+                <div class="nav__bar1"></div>
+                <div class="nav__bar2"></div>
+                <div class="nav__bar3"></div>
             </div>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#depoimento">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" data-section="home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#" data-section="main" class="nav__link">Sobre Nós</a></li>
+                <li class="nav__item"><a href="#" data-section="section" class="nav__link">Serviços</a></li>
+                <li class="nav__item"><a href="#" data-section="aside" class="nav__link">Depoimentos</a></li>
+                <li class="nav__item"><a href="#" data-section="footer"  class="nav__link">Contato</a></li>
             </ul>
        </nav>
        
        <!-- Conteúdo principal do site (história e informações da empresa) -->
 
-    <main>
+    <main class="container__main main">
             <!-- Imagem responsiva utilizando srcset para mobile, tablet e desktop -->
 
             <img 
-                    class="agencia"
+                    class="main__img"
                     src="src/img/web-desktop.png"
                     srcset="
                         src/img/web-mobile.png 400w,
@@ -51,15 +52,15 @@
                     sizes="(max-width: 768px) 100vw, 1200px"
                     alt="Fachada da Agência Criativa Web">
 
-            <h2 id="sobre">Agência de Criativa Web</h2>
-            <h3>Nossa História – Pacatuba, Ceará</h3>
-            <p>
+            <h2 class="main__title">Agência de Criativa Web</h2>
+            <h3 class="main__title--sub">Nossa História – Pacatuba, Ceará</h3>
+            <p class="main__text">
                 Fundada no coração de Pacatuba, a Agência de Criativa Web nasceu de um sonho simples:
                 provar que grandes ideias não precisam nascer nas capitais — elas podem surgir de qualquer 
                 lugar, inclusive do interior do Ceará.
             </p>
-            <h3>O Começo</h3>
-            <p>
+            <h3 class="main__title--sub">O Começo</h3>
+            <p class="main__text">
                 Em 2021, três amigos apaixonados por tecnologia, design e negócios decidiram transformar talento em oportunidade. Trabalhando inicialmente de casa, com apenas dois notebooks e muita determinação, começaram ajudando pequenos comércios locais a criarem presença digital.
 
                 A primeira oportunidade veio de um mercadinho do bairro Jereissati. Um site simples, mas feito com cuidado. Em poucos meses, o negócio dobrou o número de clientes vindos das redes sociais.
@@ -67,109 +68,108 @@
                 Ali, a agência entendeu seu propósito:
                 impulsionar negócios locais através da internet.
             </p>
-            <h3>Crescimento e Expansão</h3>
-            <h4>
+            <h3 class="main__title--sub">Crescimento e Expansão</h3>
+            <h4 class="main__title--sub">
                 Com o aumento da demanda, a agência passou a oferecer:
             </h4>
-            <ul class="lista-servicos">
-                <li>Desenvolvimento de sites institucionais</li>
-                <li>Landing pages de alta conversão</li>
-                <li>Identidade visual</li>
-                <li>Gestão de tráfego pago</li>
-                <li>Sistemas web personalizados</li>
+            <!--Lista de serviços -->
+            <ul class="main__lista-servicos">
+                <li class="main__item">Desenvolvimento de sites institucionais</li>
+                <li class="main__item">Landing pages de alta conversão</li>
+                <li class="main__item">Identidade visual</li>
+                <li class="main__item">Gestão de tráfego pago</li>
+                <li class="main__item">Sistemas web personalizados</li>
             </ul>
 
-            <p>
+            <p class="main__text">
                 Empresas de cidades vizinhas como Maracanaú e Fortaleza começaram a procurar os serviços da equipe.
 
                 O que começou pequeno se transformou em referência regional.
             </p>
-            <h3>Nossa Filosofia</h3>
-            <h4>
-                Acreditamos que:
-            </h4>
+            <h3 class="main__title--sub">Nossa Filosofia</h3>
+            <h4 class="main__title--sub">Acreditamos que:</h4>
             
-            <ul class="lista-filosofia">
-                <li>Cada marca tem uma história única</li>
-                <li>Tecnologia é ferramenta, não solução mágica</li>
-                <li>Design precisa gerar resultado</li>
-                <li>Estratégia vem antes do código</li>
+            <ul class="main__lista-filosofia">
+                <li class="main__item">Cada marca tem uma história única</li>
+                <li class="main__item">Tecnologia é ferramenta, não solução mágica</li>
+                <li class="main__item">Design precisa gerar resultado</li>
+                <li class="main__item">Estratégia vem antes do código</li>
             </ul>
 
             
-            <p>
+            <p class="main__text">
                 Nosso diferencial não está apenas no desenvolvimento, mas na visão estratégica de crescimento digital.
             </p>
-            <h3>Hoje</h3>
-            <p>
+            <h3 class="main__title--sub">Hoje</h3>
+            <p class="main__text">
                 Hoje, a Agência de Criativa Web atende clientes em todo o Brasil, mantendo sua essência em Pacatuba.
             </p>
-           <h4>Somos uma empresa que valoriza:</h4>
+           <h4 class="main__title--sub">Somos uma empresa que valoriza:</h4>
 
-            <ul class="lista-valores">
-                <li>Inovação</li>
-                <li>Proximidade com o cliente</li>
-                <li>Resultados reais</li>
-                <li>Crescimento sustentável</li>
+            <ul class="main__lista-valores">
+                <li class="main__item">Inovação</li>
+                <li class="main__item">Proximidade com o cliente</li>
+                <li class="main__item">Resultados reais</li>
+                <li class="main__item">Crescimento sustentável</li>
             </ul>
             
     </main>
 
     <!-- Seção de serviços oferecidos pela agência -->
-    <section id="servicos">
-            <h3>Nossos Serviços</h3>
+    <section class="container__section section">
+            <h3 class="section__title">Nossos Serviços</h3>
 
-            <div class="servico">
-                <h4>Desenvolvimento de Sites</h4>
-                <p>Criamos sites modernos, rápidos e responsivos, pensados para gerar autoridade e atrair clientes.</p>
+            <div class="section__servico">
+                <h4 class="section__title--sub">Desenvolvimento de Sites</h4>
+                <p class="section__text">Criamos sites modernos, rápidos e responsivos, pensados para gerar autoridade e atrair clientes.</p>
             </div>
 
-            <div class="servico">
-                <h4>Landing Pages</h4>
-                <p>Páginas estratégicas focadas em transformar visitantes em clientes.</p>
+            <div class="section__servico">
+                <h4 class="section__title--sub">Landing Pages</h4>
+                <p class="section__text">Páginas estratégicas focadas em transformar visitantes em clientes.</p>
             </div>
 
-            <div class="servico">
-                <h4>Identidade Visual</h4>
-                <p>Construímos marcas fortes e memoráveis para seu negócio.</p>
+            <div class="section__servico">
+                <h4 class="section__title--sub">Identidade Visual</h4>
+                <p class="section__text">Construímos marcas fortes e memoráveis para seu negócio.</p>
             </div>
 
-            <div class="servico">
-                <h4>Tráfego Pago</h4>
-                <p>Campanhas estratégicas para atrair clientes qualificados.</p>
+            <div class="section__servico">
+                <h4 class="section__title--sub">Tráfego Pago</h4>
+                <p class="section__text">Campanhas estratégicas para atrair clientes qualificados.</p>
             </div>
 
-            <div class="servico">
-                <h4>Sistemas Web</h4>
-                <p>Soluções digitais personalizadas para automatizar processos.</p>
+            <div class="section__servico">
+                <h4 class="section__title--sub">Sistemas Web</h4>
+                <p class="section__text">Soluções digitais personalizadas para automatizar processos.</p>
             </div>
    </section>
 
     <!-- Área lateral contendo depoimentos de clientes -->
-    <aside class="depoimentos" id="depoimento">
-            <h3>Depoimentos</h3>
+    <aside class="container__aside aside">
+            <h3 class="aside__title">Depoimentos</h3>
 
-            <div class="card-depoimento">
-                <p>"A Criativa Web transformou totalmente a presença digital da nossa empresa. Atendimento excelente e resultado rápido."</p>
-                <span>- Carlos Silva, Empresário</span>
+            <div class="aside__card">
+                <p class="aside__text">"A Criativa Web transformou totalmente a presença digital da nossa empresa. Atendimento excelente e resultado rápido."</p>
+                <span class="aside__author">- Carlos Silva, Empresário</span>
             </div>
 
-            <div class="card-depoimento">
-                <p>"Nosso site ficou moderno e começamos a receber muito mais contatos pelo WhatsApp."</p>
-                <span>- Mariana Souza, Loja Local</span>
+            <div class="aside__card">
+                <p class="aside__text">"Nosso site ficou moderno e começamos a receber muito mais contatos pelo WhatsApp."</p>
+                <span class="aside__author">- Mariana Souza, Loja Local</span>
             </div>
 
-            <div class="card-depoimento">
-                <p>"Profissionais criativos, comprometidos e estratégicos. Recomendo demais!"</p>
-                <span>- João Mendes, Consultor</span>
+            <div class="aside__card">
+                <p class="aside__text">"Profissionais criativos, comprometidos e estratégicos. Recomendo demais!"</p>
+                <span class="aside__author">- João Mendes, Consultor</span>
             </div>
     </aside>
 
 
         <!-- Rodapé com informações de contato e formulário -->
-        <footer id="contato">
-            <h2>Informações para Contatos</h2>
-            <div class="endereco">
+        <footer class="container__footer footer">
+            <h2 class="footer__title">Informações para Contatos</h2>
+            <div class="footer__endereco">
                 <p>Rua Atriz Nº 101</p>
                 <p>Centro - Pacatuba - CE</p>
                 <p>Telefone:(85)9-01020304</p>
@@ -178,20 +178,20 @@
             </div>
 
             <!-- Formulário para envio de mensagem -->
-           <form>
-                <h2>Deixe sua mensagem</h2>
+           <form class="footer__form">
+                <h2 class="footer__title--sub">Deixe sua mensagem</h2>
 
-                <label for="nome">Nome:</label>
-                <input type="text"  id="nome">
+                <label for="nome" class="footer__form--label">Nome:</label>
+                <input type="text"  id="nome" class="footer__form--input">
 
-                <label for="email">Email:</label>
-                <input type="email"  id="email">
+                <label for="email" class="footer__form--label">Email:</label>
+                <input type="email"  id="email" class="footer__form--input">
 
-                <label for="mensagem">Mensagem:</label>
-                <textarea name="mensagem" id="mensagem"></textarea>
+                <label for="mensagem" class="footer__form--label">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" class="footer__form--textarea"></textarea>
 
 
-                <button type="submit">Enviar</button>
+                <button type="submit" class="footer__form--button">Enviar</button>
            </form>
             <!-- Direitos autorais do site -->
             <p>© 2026 - John Lima</p>
