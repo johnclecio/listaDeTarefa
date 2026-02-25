@@ -2,6 +2,7 @@
   background: #007bff;
   padding: 20px;
   color: white;
+  padding: 20px;
 }
 .cabecalho__title {
   text-align: center;
@@ -12,6 +13,7 @@
 }
 .conteudo__paragrafo {
   font-size: 16px;
+  margin-bottom: 10px;
 }
 .conteudo__link {
   text-decoration: none;

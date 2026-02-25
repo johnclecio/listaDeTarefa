@@ -1,9 +1,11 @@
 @use 'variaveis';
 
+
 .conteudo{
    padding: variaveis.$espacamento-padrao;
    &__paragrafo{
     font-size: 16px;
+    margin-bottom: variaveis.$espacamento-metade;
    }
    &__link{
     text-decoration: none;
