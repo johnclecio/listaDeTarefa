@@ -1,0 +1,47 @@
+
+@use 'sass:math';
+/*Utilizar variáveis SASS para cores, espaçamentos, fontes e tamanhos.*/
+/*(cores, espaçamentos, fontes)*/
+$cor-de-fundo: linear-gradient(135deg, #8b5a2b, #5c3a21);
+
+/*espacamento de container Grid*/
+$espacamento-de-container: 20px;
+$espacamento-de-with: 1200px;
+$espacamento-de-margin: 80px auto 0 auto;
+$espacamento-de-column: 1fr 2fr 1fr;
+
+/*espacamento  de h1*/
+$espacamento-container_header:0.2rem;
+$font-header_logo:5rem;
+$font-weight: bold;
+$espacamento-logo:30px;
+$color-span:#00adb5;
+
+/*calcular espaçamento pra mobile*/
+
+$font-header_logo-menor: calc($font-header_logo / 2);
+/*button*/
+$cor-button-back:$color-span;
+$cor-button: white;
+$font-size: 0.875rem;
+
+
+/*formulario*/
+$form-with: 100%;
+$form-max-width: 500px;
+
+/*section & aside*/
+$cor-de-back:#5c3a21;
+$color: #fff;
+$border: solid 1px rgb(2, 2, 2);
+$border-radius: 15px;
+$text-center: center;
+$padding: 30px;
+
+
+
+/*text section & text aside*/
+$text-top: 10px;
+$text-font: 0.9rem;
+$text-justify: justify;
+

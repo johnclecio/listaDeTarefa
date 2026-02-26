@@ -1,0 +1,28 @@
+
+@use 'variaveis';
+
+
+@mixin color-span{
+    color: variaveis.$color-span;
+    
+}
+@mixin cor-button-back{
+    background: variaveis.$cor-button-back;
+    color: variaveis.$cor-button;
+    font-size: variaveis.$font-size;
+}
+
+@mixin layout{
+    background: variaveis.$cor-de-back;
+    color: variaveis.$color;
+    border: variaveis.$border;
+    border-radius: variaveis.$border-radius;
+    text-align: variaveis.$text-center;
+    padding: variaveis.$padding; 
+}
+
+@mixin textLayoutSectionAside{
+    margin-top: variaveis.$text-top;
+    font-size: variaveis.$text-font;
+    text-align: variaveis.$text-justify;
+}

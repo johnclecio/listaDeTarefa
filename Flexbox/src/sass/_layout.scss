@@ -1,0 +1,45 @@
+@use 'variaveis';
+@use 'mixins';
+/*(estrutura geral da página)*/
+.container {
+    display: grid;
+    grid-template-columns: variaveis.$espacamento-de-column;
+    grid-template-areas:
+        "header header header"
+        "section main aside"
+        "footer footer footer";
+    min-height: 100vh;
+    gap: 20px;
+    max-width: variaveis.$espacamento-de-with;
+    margin: variaveis.$espacamento-de-margin;
+    padding: variaveis.$espacamento-de-container;
+}
+
+.container__header { grid-area: header; }
+.container__main   { grid-area: main; }
+.container__section{ grid-area: section; }
+.container__aside  { grid-area: aside; }
+.container__footer { grid-area: footer; }
+
+/* Estilização do cabeçalho */
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: variaveis.$espacamento-container_header ;
+
+} 
+.header__logo {
+  font-size: variaveis.$font-header_logo;
+  margin-left: variaveis.$espacamento-logo;
+  font-weight: variaveis.$font-weight;
+  
+}
+
+.header__highlight {
+  @include mixins.color-span;
+}
+
+
+
+
