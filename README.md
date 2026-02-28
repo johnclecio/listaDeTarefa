@@ -130,8 +130,25 @@ O projeto foi desenvolvido com foco no aprendizado de **manipulação do DOM**, 
 
 ---
 
+## 9. Agência Criativa Web
+Projeto institucional fictício desenvolvido para simular o site de uma agência digital localizada em Pacatuba - CE, com foco em arquitetura escalável com SASS, organização modular e boas práticas de desenvolvimento front-end.
 
+### Funcionalidades Implementadas
+✔ Layout estruturado com CSS Grid
 
+✔ Menu hambúrguer com JavaScript
+
+✔ Navegação interna dinâmica
+
+✔ Imagens responsivas com srcset
+
+✔ Organização seguindo padrão BEM
+
+✔ Uso de variáveis e mixins
+
+✔ Estrutura semântica completa
+
+---
 
 ##  Tecnologias Utilizadas
 
