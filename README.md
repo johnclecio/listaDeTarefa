@@ -1,4 +1,4 @@
-# Projetos JavaScript do John Lima
+# Projetos (JavaScript,HTML,CSS,SASS,BOOTSTRAP,TAILWIND) do John Lima
 
 Bem-vindo ao meu repositório! Aqui você encontra projetos que desenvolvi em JavaScript com foco em lógica de programação e Programação Orientada a Objetos.
 
