@@ -150,6 +150,25 @@ Projeto institucional fictício desenvolvido para simular o site de uma agência
 
 ---
 
+10 # 🐾 Pet&Style
+
+Pet&Style é uma landing page moderna para uma loja fictícia de produtos pet, desenvolvida com foco em design responsivo, organização de código e boas práticas de Front-End.
+## 🎨 Funcionalidades
+
+Layout responsivo
+
+Gradientes modernos
+
+Seção de produtos
+
+Menu com interação
+
+Seção de contato
+
+Estilização com Tailwind Utility-First
+
+---
+
 ##  Tecnologias Utilizadas
 
 - HTML5
