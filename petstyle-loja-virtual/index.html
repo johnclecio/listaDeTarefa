@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>Pet&Style</title>
+</head>
+<body>
+       
+<div class="bg-white">
+  <!-- Mobile menu -->
+       
+  <dialog id="mobile-menu" class="backdrop:bg-black/40 lg:hidden">
+
+  <div class="fixed inset-0 flex">
+    <div class="relative w-72 bg-white h-full shadow-xl p-6">
+
+      <!-- Botão fechar -->
+      <button onclick="document.getElementById('mobile-menu').close()"
+        class="mb-6 text-gray-500 hover:text-gray-800">
+        ✕ Fechar
+      </button>
+
+      <!-- Links -->
+      <nav class="flex flex-col space-y-6">
+        <a href="#home" class="text-gray-700 hover:text-indigo-600 transition">
+          Início
+        </a>
+
+        <a href="#produtos" class="text-gray-700 hover:text-indigo-600 transition">
+          Produtos
+        </a>
+
+        <a href="#depoimentos" class="text-gray-700 hover:text-indigo-600 transition">
+          Depoimentos
+        </a>
+        <a href="#contato" class="text-gray-700 hover:text-indigo-600 transition">
+          Contato
+        </a>
+      </nav>
+
+    </div>
+  </div>
+
+</dialog>
+        
+
+  <header class="relative bg-white">
+        <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="border-b border-gray-200">
+            <div class="flex h-16 items-center justify-between">
+                  <button onclick="document.getElementById('mobile-menu').showModal()"
+                    class="lg:hidden p-2 text-gray-600">
+                    ☰
+                    </button>
+            <!-- Logo -->
+            <a href="#home" class="flex items-center">
+                <img src="/src/img/logo.png" alt="Pet&Style" class="h-8 w-auto">
+            </a>
+
+            <!-- Menu Desktop -->
+            <div class="hidden lg:flex space-x-8">
+                <a href="#home" class="text-sm font-medium text-gray-700 hover:text-indigo-600 transition">
+                Início
+                </a>
+                <a href="#produtos" class="text-sm font-medium text-gray-700 hover:text-indigo-600 transition">
+                Produtos
+                </a>
+                <a href="#depoimentos" class="text-sm font-medium text-gray-700 hover:text-indigo-600 transition">
+                Depoimentos
+                </a>
+                <a href="#contato" class="text-sm font-medium text-gray-700 hover:text-indigo-600 transition">
+                Contato
+                </a>
+            </div>
+
+            </div>
+        </div>
+        </nav>
+  </header>
+
+  <section class="bg-linear-to-r from-rose-400 to-blue-500 py-20">
+  <div class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between gap-10">
+
+    <!-- Texto -->
+    <div class="md:w-1/2 text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
+        Estilo e carinho para o seu melhor amigo 🐾
+      </h1>
+
+      <p class="mt-6 text-lg text-gray-600">
+        Descubra acessórios, roupas e produtos exclusivos para deixar
+        seu pet ainda mais estiloso e feliz.
+      </p>
+
+      <div class="mt-8 flex justify-center md:justify-start gap-4">
+        <a href="#produtos"
+           class="bg-rose-500 hover:bg-rose-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition duration-300">
+          Ver Produtos
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Imagem -->
+    <div class="md:w-1/2 flex justify-center">
+      <img class="rounded-4xl" src="https://images.pexels.com/photos/3299905/pexels-photo-3299905.jpeg"
+           alt="Pet estiloso da loja"
+           class="w-80 md:w-112.5 drop-shadow-2xl rounded-4xl">
+    </div>
+
+  </div>
+</section>
+
+
+</div>
+<!--Produtos-->
+<section id="produtos" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Título -->
+    <div class="text-center mb-14">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+        Produtos em Destaque 🐶🐱
+      </h2>
+      <p class="text-gray-600 mt-3">
+        Qualidade, conforto e muito estilo para o seu pet.
+      </p>
+    </div>
+
+    <!-- Grid de Cards -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+        <img src="https://images.pexels.com/photos/28948931/pexels-photo-28948931.jpeg" alt="Coleira Estilosa"
+             class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-gray-800">
+            Coleira Premium
+          </h3>
+          <p class="text-gray-600 text-sm mt-2">
+            Confortável, resistente e cheia de estilo.
+          </p>
+          <p class="text-rose-500 font-bold text-xl mt-4">
+            R$ 79,90
+          </p>
+          <button class="mt-4 w-full border border-rose-500 text-rose-500 py-2 rounded-lg hover:bg-rose-500 hover:text-white transition">
+            Ver detalhes
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+        <img src="https://images.pexels.com/photos/18344059/pexels-photo-18344059.jpeg" alt="Roupa Pet"
+             class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-gray-800">
+            Roupa Fashion Pet
+          </h3>
+          <p class="text-gray-600 text-sm mt-2">
+            Ideal para dias frios com muito charme.
+          </p>
+          <p class="text-rose-500 font-bold text-xl mt-4">
+            R$ 119,90
+          </p>
+          <button class="mt-4 w-full border border-rose-500 text-rose-500 py-2 rounded-lg hover:bg-rose-500 hover:text-white transition">
+            Ver detalhes
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+        <img src="https://images.pexels.com/photos/34606474/pexels-photo-34606474.jpeg" alt="Brinquedo Pet"
+             class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-gray-800">
+            Brinquedo Interativo
+          </h3>
+          <p class="text-gray-600 text-sm mt-2">
+            Diversão garantida para o seu melhor amigo.
+          </p>
+          <p class="text-rose-500 font-bold text-xl mt-4">
+            R$ 49,90
+          </p>
+          <button class="mt-4 w-full border border-rose-500 text-rose-500 py-2 rounded-lg hover:bg-rose-500 hover:text-white transition">
+            Ver detalhes
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+        <img src="https://images.pexels.com/photos/7726310/pexels-photo-7726310.jpeg" alt="Cama Pet"
+             class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-gray-800">
+            Cama Super Confort
+          </h3>
+          <p class="text-gray-600 text-sm mt-2">
+            Maciez e conforto para o descanso perfeito.
+          </p>
+          <p class="text-rose-500 font-bold text-xl mt-4">
+            R$ 189,90
+          </p>
+          <button class="mt-4 w-full border border-rose-500 text-rose-500 py-2 rounded-lg hover:bg-rose-500 hover:text-white transition">
+            Ver detalhes
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--Depoimento-->
+
+<section id="depoimentos" class="py-20 bg-linear-to-r from-rose-50 via-white to-cyan-50">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Título -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+        O que nossos clientes dizem 🐶🐱
+      </h2>
+      <p class="text-gray-600 mt-4">
+        Amor, cuidado e muito estilo para os pets.
+      </p>
+    </div>
+
+    <!-- Grid depoimentos -->
+    <div class="grid gap-8 md:grid-cols-3">
+
+      <!-- Depoimento 1 -->
+      <div class="bg-white rounded-3xl shadow-lg p-8 text-center hover:shadow-2xl transition duration-300">
+        <div class="text-rose-400 text-2xl mb-4">★★★★★</div>
+        <p class="text-gray-600 italic">
+          "Minha cachorrinha ficou linda com a roupinha nova. Qualidade incrível!"
+        </p>
+        <h4 class="mt-6 font-semibold text-gray-800">
+          Ana Souza
+        </h4>
+      </div>
+
+      <!-- Depoimento 2 -->
+      <div class="bg-white rounded-3xl shadow-lg p-8 text-center hover:shadow-2xl transition duration-300">
+        <div class="text-rose-400 text-2xl mb-4">★★★★★</div>
+        <p class="text-gray-600 italic">
+          "Entrega rápida e atendimento maravilhoso. Recomendo demais!"
+        </p>
+        <h4 class="mt-6 font-semibold text-gray-800">
+          Carlos Lima
+        </h4>
+      </div>
+
+      <!-- Depoimento 3 -->
+      <div class="bg-white rounded-3xl shadow-lg p-8 text-center hover:shadow-2xl transition duration-300">
+        <div class="text-rose-400 text-2xl mb-4">★★★★★</div>
+        <p class="text-gray-600 italic">
+          "Os brinquedos são super resistentes. Meu gato amou!"
+        </p>
+        <h4 class="mt-6 font-semibold text-gray-800">
+          Fernanda Alves
+        </h4>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!--Contato-->
+<section id="contato" class="py-20 bg-linear-to-r from-rose-50 via-white to-cyan-100">
+  <div class="max-w-3xl mx-auto px-6">
+
+    <!-- Título -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+        Fale Conosco 🐾
+      </h2>
+      <p class="text-gray-600 mt-4">
+        Tem alguma dúvida ou sugestão? Envie uma mensagem!
+      </p>
+    </div>
+
+    <!-- Formulário -->
+    <form class="bg-white shadow-xl rounded-3xl p-8 space-y-6">
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">
+          Email
+        </label>
+        <input 
+          type="email" 
+          id="email"
+          placeholder="seuemail@email.com"
+          class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition">
+      </div>
+
+      <!-- Telefone -->
+      <div>
+        <label for="telefone" class="block text-sm font-medium text-gray-700">
+          Telefone
+        </label>
+        <input 
+          type="tel" 
+          id="telefone"
+          placeholder="(21) 91234-5678"
+          class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition">
+      </div>
+
+      <!-- Mensagem -->
+      <div>
+        <label for="mensagem" class="block text-sm font-medium text-gray-700">
+          Mensagem
+        </label>
+        <textarea 
+          id="mensagem" 
+          rows="5"
+          placeholder="Digite sua mensagem..."
+          class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition resize-none">
+        </textarea>
+      </div>
+
+      <!-- Botão -->
+      <button 
+        type="submit"
+        class="w-full bg-rose-500 hover:bg-rose-600 text-white font-semibold py-3 rounded-xl shadow-md transition duration-300">
+        Enviar Mensagem
+      </button>
+
+    </form>
+
+  </div>
+</section>
+
+<footer class="py-20 bg-linear-to-r from-rose-50 via-white to-yellow-50">
+    <p class="text-center">&copy; Todos os direitos reservados 2026</p>
+</footer>
+
+    
+    
+</body>
+</html>
