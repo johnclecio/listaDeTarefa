@@ -1,32 +1,50 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Tarefa from "./components/tarefa";
 
 
+//crudcrud
+const API_URl = 'https://crudcrud.com/api/6b6c4edacc624b468d696a0036191004/tarefas';
 
 
 function App(){
 
-  const [tarefas, setTarefas ]= useState( [
-    {id: 1, texto: "Estuadar React " },
-    {id: 2, texto: "Fazer compras " },
-    {id: 3, texto: "Responder e-mails " }
-  ]);
+  const [tarefas, setTarefas ]= useState([]);
 
   const [novaTarefa, setNovaTarefa] = useState("");
+
+
+  //Buscar os dados 
+
+  useEffect(()=>{
+    fetch(API_URl)
+    .then(res => res.json())
+    .then(dados => setTarefas(dados))
+    .catch(error => console.error("Erro ao buscar tarefas:", error))
+  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(novaTarefa.trim() === '')return;
+    if(novaTarefa.trim() === "")return;
 
-    const novoId = tarefas[tarefas.length - 1].id +1;
-    const nova = {
-      id: novoId,
-      texto: novaTarefa.trim()
-    }
-    setTarefas([...tarefas, nova]);
-    setNovaTarefa('');
-  }
+    const nova = {  texto: novaTarefa.trim()};
+
+    fetch(API_URl, {
+      method: 'POST',
+      headers: { 'Content-Type' : 'application/json'},
+      body: JSON.stringify(nova)
+  })   
+    .then(res => res.json())
+    .then(tarefasCriada =>{
+        setTarefas([...tarefas, tarefasCriada]);
+        setNovaTarefa('');
+  })
+   
+    .catch(error => console.error("Erro ao buscar tarefas:", error));
+
+   
+   
+  };
 
   return (
   <main>
@@ -40,7 +58,9 @@ function App(){
         </form>
 
         <ul>
-          {tarefas.map((tarefa => <Tarefa key={tarefa.id} texto={tarefa.texto}/>))}
+          {tarefas.map(tarefa => (
+          <Tarefa key={tarefa._id} texto={tarefa.texto} />
+        ))}
         </ul>
   </main>
   )
