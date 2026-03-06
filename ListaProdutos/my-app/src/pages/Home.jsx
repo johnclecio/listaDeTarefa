@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
 import Lista from "../components/ProdutoCard";
+import '../components/Lista.css';
 
 function Home() {
 
   const [produtos, setProdutos] = useState([]);
   const [carregando, setCarregando] = useState(true);
+
+  // states do formulário
+  const [nome, setNome] = useState("");
+  const [preco, setPreco] = useState("");
+  const [descricao, setDescricao] = useState("");
+  const [imagem, setImagem] = useState("");
 
   //Simular API
   useEffect(() => {
@@ -38,28 +45,94 @@ function Home() {
       setProdutos(produtosMock);
       setCarregando(false);
 
-    }, 2000); // simula 2 segundos de requisição
+    }, 2000);
 
   }, []);
+
+  // adicionar produto
+  const handleSubmit = (e) => {
+
+    e.preventDefault();
+
+    const novoProduto = {
+      id: Date.now(),
+      nome,
+      preco,
+      descricao,
+      imagem
+    };
+
+    setProdutos([...produtos, novoProduto]);
+
+    // limpar formulário
+    setNome("");
+    setPreco("");
+    setDescricao("");
+    setImagem("");
+  };
 
   if (carregando) {
     return <p>Carregando produtos...</p>;
   }
 
   return (
-    <ul className="listaContainer">
+    <div className="listaContainer">
 
-      {produtos.map((produto) => (
-        <Lista
-          key={produto.id}
-          nome={produto.nome}
-          preco={produto.preco}
-          imagem={produto.imagem}
-          descricao={produto.descricao}
+      <h1>Catálogo de Produtos</h1>
+
+      {/* FORMULÁRIO */}
+      <form className="listaForm" onSubmit={handleSubmit}>
+
+        <input
+          type="text"
+          placeholder="Nome do produto"
+          value={nome}
+          onChange={(e) => setNome(e.target.value)}
+          required
         />
-      ))}
 
-    </ul>
+        <input
+          type="number"
+          placeholder="Preço"
+          value={preco}
+          onChange={(e) => setPreco(e.target.value)}
+          required
+        />
+
+        <input
+          type="text"
+          placeholder="Descrição"
+          value={descricao}
+          onChange={(e) => setDescricao(e.target.value)}
+          required
+        />
+
+        <input
+          type="text"
+          placeholder="URL da imagem"
+          value={imagem}
+          onChange={(e) => setImagem(e.target.value)}
+        />
+
+        <button type="submit">Adicionar Produto</button>
+
+      </form>
+
+      <ul>
+
+        {produtos.map((produto) => (
+          <Lista
+            key={produto.id}
+            nome={produto.nome}
+            preco={produto.preco}
+            imagem={produto.imagem}
+            descricao={produto.descricao}
+          />
+        ))}
+
+      </ul>
+
+    </div>
   );
 }
 

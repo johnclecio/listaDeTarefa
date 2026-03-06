@@ -16,6 +16,31 @@ h1{
     text-align: center;
 }
 
+.listaForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input,
+select,
+button {
+    padding: 8px;
+    font-size: 14px;
+}
+
+button {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #43a047;
+}
 .listaContainer {
     background: #fff;
     padding: 20px;
