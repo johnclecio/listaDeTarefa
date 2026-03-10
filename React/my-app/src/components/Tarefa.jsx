@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useState , useEffect, memo} from "react";
 import './Tarefa.css';
 
 
 function Tarefa({ texto }) {
 
     const [concluida, setConcluida] = useState(false);
+
+
+        useEffect(() =>{
+            console.log("Componente tarefa executada", texto);
+        },[])
+        
+        
+        console.log("componente tarefa executado", texto);
 
     const alternarConcluida = () =>{
         setConcluida(!concluida);
@@ -15,4 +23,4 @@ function Tarefa({ texto }) {
     )
 }
 
-export default Tarefa;
+export default memo(Tarefa);
