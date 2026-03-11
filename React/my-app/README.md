@@ -6,7 +6,7 @@ Aplicação de lista de tarefas desenvolvida com **React** para praticar Hooks, 
 
 ## 📷 Preview
 
-![Preview da aplicação](./public/preview.png)
+![Preview da aplicação](./src/assets/preview.png)
 
 ---
 
