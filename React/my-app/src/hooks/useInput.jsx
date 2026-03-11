@@ -9,13 +9,12 @@ export function useinput(valorInicial = ""){
         setValor(e.target.value);
     }
 
-    const valorLimpo = () => valor.trim();
+    
 
     const limpar = () => setValor("");
     return{
         valor,
         onChange,
-        valorLimpo,
         limpar
 
     }

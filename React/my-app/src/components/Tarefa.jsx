@@ -1,26 +1,37 @@
-import { useState , useEffect, memo} from "react";
+import { useEffect, memo } from "react";
 import './Tarefa.css';
 
+function Tarefa({ texto, concluida, onToggle, onRemover }) {
 
-function Tarefa({ texto }) {
+  useEffect(() => {
+    console.log("Componente tarefa executada", texto);
+  }, []);
 
-    const [concluida, setConcluida] = useState(false);
-
-
-        useEffect(() =>{
-            console.log("Componente tarefa executada", texto);
-        },[])
-        
-        
-        console.log("componente tarefa executado", texto);
-
-    const alternarConcluida = () =>{
-        setConcluida(!concluida);
+  const handleClick = () => {
+    if (concluida) {
+      onRemover();   // remove tarefa
+    } else {
+      onToggle();    // marca como concluída
     }
+  };
 
-    return (
-        <li><input type="checkbox" onChange={alternarConcluida}/> <span className={ concluida ? "concluida" : ""}>{texto}</span> <button>Remover</button></li>
-    )
+  return (
+    <li>
+      <input className="btn"
+        type="checkbox"
+        checked={concluida}
+        onChange={onToggle}
+      />
+
+      <span className={concluida ? "concluida" : ""}>
+        {texto}
+      </span>
+
+      <button onClick={handleClick}>
+        {concluida ? "Remover" : "Concluída"}
+      </button>
+    </li>
+  );
 }
 
 export default memo(Tarefa);
