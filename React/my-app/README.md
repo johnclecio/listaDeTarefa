@@ -29,7 +29,7 @@ Aplicação de lista de tarefas desenvolvida com **React** para praticar Hooks, 
 - Context API
 - Custom Hooks
 - LocalStorage
-- Fetch API
+
 
 ---
 

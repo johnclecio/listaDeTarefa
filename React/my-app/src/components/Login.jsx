@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { useinput } from "../hooks/useInput";
+import { useInput } from "../hooks/useInput";
 import { UserContext } from "../contexts/UserContext";
 
 
 function Login(){
-    const nomeDoUsuario = useinput();
+    const nomeDoUsuario = useInput();
     const {setUsuario} = useContext(UserContext);
     const handlelogin =(e) => {
         e.preventDefault();

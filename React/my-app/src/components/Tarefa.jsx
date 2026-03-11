@@ -1,23 +1,19 @@
-import { useEffect, memo } from "react";
-import './Tarefa.css';
+import { memo } from "react";
+import "./Tarefa.css";
 
 function Tarefa({ texto, concluida, onToggle, onRemover }) {
 
-  useEffect(() => {
-    console.log("Componente tarefa executada", texto);
-  }, []);
-
   const handleClick = () => {
     if (concluida) {
-      onRemover();   // remove tarefa
+      onRemover();
     } else {
-      onToggle();    // marca como concluída
+      onToggle();
     }
   };
 
   return (
     <li>
-      <input className="btn"
+      <input
         type="checkbox"
         checked={concluida}
         onChange={onToggle}

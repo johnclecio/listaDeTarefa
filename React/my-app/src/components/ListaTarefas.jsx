@@ -1,11 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+
 import Tarefa from "./tarefa";
-import { useinput } from "../hooks/useInput";
+import { useInput } from "../hooks/useInput";
 import { UserContext } from "../contexts/UserContext";
+import { useContext, useEffect, useState, useCallback } from "react";
 
 
-//crudcrud
-const API_URl = 'https://crudcrud.com/api/b8cd6e157e634816a3eefc86cc7cc3e1/tarefas';
+
 
 
 function ListaTarefas(){
@@ -16,30 +16,27 @@ function ListaTarefas(){
   const [tarefas, setTarefas ]= useState([]);
 
   // hook customizado que controla o valor do input da tarefa
-  const tarefa = useinput();
+  const tarefa = useInput();
   
   // acessa o usuário logado através do Context API
   const {usuario} = useContext(UserContext);
   
-  // remove a tarefa da API e atualiza o estado da lista
-  const removerTarefa = (id) => {
-  fetch(`${API_URl}/${id}`, {
-    method: "DELETE"
-  })
-  .then(() => {
-    setTarefas((prev) => prev.filter((t) => t._id !== id));
-  })
-  .catch(error => console.error("Erro ao remover tarefa:", error));
 
-};
 // alterna o status da tarefa entre concluída e pendente
-const alternarStatus = (id) => {
+const alternarStatus = useCallback((id) => {
   setTarefas((prev) =>
     prev.map((t) =>
-      t._id === id ? { ...t, concluida: !t.concluida } : t
+      t.id === id ? { ...t, concluida: !t.concluida } : t
     )
   );
-};
+}, []);
+// remove Tarefa 
+const removerTarefa = useCallback((id) => {
+  setTarefas((prev) => prev.filter((t) => t.id !== id));
+}, []);
+
+
+
 
    // carregar tarefas do localStorage
   useEffect(() => {
@@ -55,47 +52,25 @@ const alternarStatus = (id) => {
     localStorage.setItem("tarefas", JSON.stringify(tarefas));
   }, [tarefas]);
 
-
-
-  // busca as tarefas salvas na API quando o componente carrega
-
-  useEffect(()=>{
-    fetch(API_URl)
-    .then(res => res.json())
-    .then(dados => setTarefas(dados))
-    .catch(error => console.error("Erro ao buscar tarefas:", error))
-  }, [])
-  // função chamada ao enviar o formulário para adicionar uma nova tarefa
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if(tarefa.valor === "")return;
-    // objeto da nova tarefa que será enviado para a API
-    const nova = {
-          usuario: usuario.nome,
-          texto: tarefa.valor,
-          concluida: false
-          };
+  if (tarefa.valor === "") return;
 
-    fetch(API_URl, {
-      method: 'POST',
-      headers: { 'Content-Type' : 'application/json'},
-      body: JSON.stringify(nova)
-  })   
-    .then(res => res.json())
-    .then(tarefaCriada =>{
-        setTarefas((prev) => [...prev, tarefaCriada]);
-        tarefa.limpar();
-        
-  }
-)   
-   
-   
-    .catch(error => console.error("Erro ao buscar tarefas:", error));
-
-   
-   
+  const nova = {
+    id: Date.now(),
+    usuario: usuario.nome,
+    texto: tarefa.valor,
+    concluida: false
   };
+
+  setTarefas((prev) => [...prev, nova]);
+  tarefa.limpar();
+};
+
+
+
+ 
 
   
 
@@ -127,15 +102,15 @@ return (
           if (filtro === "concluidas") return tarefa.concluida;
           return true;
         })
-        .map((tarefa) => (
+          .map((tarefa) => (
           <Tarefa 
-              key={tarefa._id}
+              key={tarefa.id}
               texto={tarefa.texto}
               concluida={tarefa.concluida}
-              onToggle={() => alternarStatus(tarefa._id)}
-              onRemover={() => removerTarefa(tarefa._id)}
-            />
-        ))}
+              onToggle={() => alternarStatus(tarefa.id)}
+              onRemover={() => removerTarefa(tarefa.id)}
+          />))}
+        
     </ul>
   </>
 );

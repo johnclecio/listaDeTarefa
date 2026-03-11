@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-export function useinput(valorInicial = ""){
+export function useInput(valorInicial = ""){
 
     const [valor, setValor] = useState(valorInicial);
 
