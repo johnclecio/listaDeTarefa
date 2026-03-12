@@ -1,5 +1,5 @@
 import { memo } from "react";
-import "./Tarefa.css";
+import styles from './Tarefa.module.css';
 
 function Tarefa({ texto, concluida, onToggle, onRemover }) {
 
@@ -12,18 +12,18 @@ function Tarefa({ texto, concluida, onToggle, onRemover }) {
   };
 
   return (
-    <li>
-      <input
+    <li className={styles.item}>
+      <input 
         type="checkbox"
         checked={concluida}
         onChange={onToggle}
       />
 
-      <span className={concluida ? "concluida" : ""}>
+      <span className={concluida ? styles.concluida : ""}>
         {texto}
       </span>
 
-      <button onClick={handleClick}>
+      <button className={styles.alerta} onClick={handleClick}>
         {concluida ? "Remover" : "Concluída"}
       </button>
     </li>

@@ -3,7 +3,7 @@ import Tarefa from "./tarefa";
 import { useInput } from "../hooks/useInput";
 import { UserContext } from "../contexts/UserContext";
 import { useContext, useEffect, useState, useCallback } from "react";
-
+import styles from './ListaTarefa.module.css';
 
 
 
@@ -76,22 +76,22 @@ const removerTarefa = useCallback((id) => {
 
 return (
   <>
-    <form onSubmit={handleSubmit}>
-      <input
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <input className={styles.input}
         type="text"
         placeholder="Digite uma nova tarefa"
         value={tarefa.valor}
         onChange={tarefa.onChange}
       />
-      <button type="submit">Adicionar</button>
+      <button className={styles.button} type="submit">Adicionar</button>
     </form>
     <div>
-      <button className="btn" onClick={() => setFiltro("todas")}>Todas</button>
-      <button className="btn" onClick={() => setFiltro("pendentes")}>Pendentes</button>
-      <button className="btn" onClick={() => setFiltro("concluidas")}>Concluídas</button>
+      <button className={styles.button} onClick={() => setFiltro("todas")}>Todas</button>
+      <button className={styles.button} onClick={() => setFiltro("pendentes")}>Pendentes</button>
+      <button className={styles.button} onClick={() => setFiltro("concluidas")}>Concluídas</button>
     </div>
 
-    <ul>
+    <ul className={styles.list}>
       
       {tarefas 
         // mostra apenas tarefas do usuário logado

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useInput } from "../hooks/useInput";
 import { UserContext } from "../contexts/UserContext";
+import styles from './ListaTarefa.module.css';
 
 
 function Login(){
@@ -12,10 +13,10 @@ function Login(){
     }
     return(
         <form onSubmit={handlelogin}>
-            <input type="text"
+            <input className={styles.input} type="text"
             value={nomeDoUsuario.valor}
             onChange={nomeDoUsuario.onChange} />
-            <button type="submit">Entrar</button>
+            <button className={styles.button} type="submit">Entrar</button>
         </form>
 
     )
