@@ -1,39 +1,29 @@
+import styled from "styled-components";
 
 
-.form {
+export const Form = styled.form`
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
-}
+`;
 
-.input[type="text"]{
+export const Input = styled.input`
     flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
-}
+    border-radius; 4px;
+`;
 
-
-
-
-.button {
+export const Botao = styled.button`
     padding: 10px 20px;
     background-color: #4caf50;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
 
-.button:hover {
-    background: #43a047;
-}
-
-.list{
-    list-style: none;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-
+    &:hover {
+     background: #43a047;
+    }
+`;
 

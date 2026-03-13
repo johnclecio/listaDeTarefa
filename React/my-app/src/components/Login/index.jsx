@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { useInput } from "../hooks/useInput";
-import { UserContext } from "../contexts/UserContext";
-import styles from './ListaTarefa.module.css';
+import { useInput } from "../../hooks/useInput";
+import { UserContext } from "../../contexts/UserContext";
+import {Form, Input, Botao} from './style'
 
 
 function Login(){
@@ -12,12 +12,12 @@ function Login(){
         setUsuario({nome: nomeDoUsuario.valor, estaLogado: true});
     }
     return(
-        <form onSubmit={handlelogin}>
-            <input className={styles.input} type="text"
+        <Form onSubmit={handlelogin}>
+            <Input  type="text" placeholder="Digite seu nome"
             value={nomeDoUsuario.valor}
             onChange={nomeDoUsuario.onChange} />
-            <button className={styles.button} type="submit">Entrar</button>
-        </form>
+            <Botao type="submit">Entrar</Botao>
+        </Form>
 
     )
 }

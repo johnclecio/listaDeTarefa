@@ -1,5 +1,41 @@
 import { memo } from "react";
-import styles from './Tarefa.module.css';
+import styled from 'styled-components';
+
+
+
+const Item = styled.li`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #ccc ;
+`;
+
+const Botao = styled.button`
+    padding: 10px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    
+
+`;
+const BotaoAlerta = styled(Botao)`
+    background-color: #f44138;
+
+    &:hover{
+      background-color: #d32f2f;
+      
+    }
+`;
+
+const TextItem = styled.span`
+    text-decoration: ${({concluida}) => (concluida ? "line-through" : "none" )} ;
+    color: ${({concluida}) => (concluida ? "gray" : "#000" )};  
+`;
+
+
 
 function Tarefa({ texto, concluida, onToggle, onRemover }) {
 
@@ -12,21 +48,21 @@ function Tarefa({ texto, concluida, onToggle, onRemover }) {
   };
 
   return (
-    <li className={styles.item}>
+    <Item >
       <input 
         type="checkbox"
         checked={concluida}
         onChange={onToggle}
       />
 
-      <span className={concluida ? styles.concluida : ""}>
+      <TextItem concluida={concluida}>
         {texto}
-      </span>
+      </TextItem>
 
-      <button className={styles.alerta} onClick={handleClick}>
+      <BotaoAlerta onClick={handleClick}>
         {concluida ? "Remover" : "Concluída"}
-      </button>
-    </li>
+      </BotaoAlerta>
+    </Item>
   );
 }
 
