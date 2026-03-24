@@ -69,7 +69,7 @@ const ImagemProduto = styled.img`
 `;  
 
 const Button = styled.button`
-  background-color: ${props => props.$adicionado ? '#198754' : '#2f3542'};
+  background-color: ${props => props.$adicionado ? '#198754' : ' #6c757d'};
   color: white;
   border: none;
   padding: 12px;
