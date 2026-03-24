@@ -1,9 +1,10 @@
 
 import Tarefa from "./tarefa";
 import { useInput } from "../hooks/useInput";
-import { UserContext } from "../contexts/UserContext";
-import { useContext, useEffect, useState, useCallback } from "react";
+import {useEffect, useState, useCallback } from "react";
 import styles from './ListaTarefa.module.css';
+import  {userState}  from "../state/user";
+import { useRecoilValue } from "recoil";
 
 
 
@@ -16,10 +17,10 @@ function ListaTarefas(){
   const [tarefas, setTarefas ]= useState([]);
 
   // hook customizado que controla o valor do input da tarefa
-  const tarefa = useInput();
+  const inputTarefa = useInput();
   
   // acessa o usuário logado através do Context API
-  const {usuario} = useContext(UserContext);
+  const usuario = useRecoilValue(userState);
   
 
 // alterna o status da tarefa entre concluída e pendente
@@ -39,33 +40,45 @@ const removerTarefa = useCallback((id) => {
 
 
    // carregar tarefas do localStorage
-  useEffect(() => {
-    const tarefasSalvas = localStorage.getItem("tarefas");
+    useEffect(() => {
+      if (!usuario?.nome) {
+        setTarefas([]);
+        return;
+      }
 
-    if (tarefasSalvas) {
-      setTarefas(JSON.parse(tarefasSalvas));
-    }
-  }, []);
+      const tarefasSalvas = localStorage.getItem(`tarefas_${usuario.nome}`);
+
+      if (tarefasSalvas) {
+        setTarefas(JSON.parse(tarefasSalvas));
+      } else {
+        setTarefas([]);
+      }
+    }, [usuario]);
 
   // salvar tarefas no localStorage sempre que mudar
   useEffect(() => {
-    localStorage.setItem("tarefas", JSON.stringify(tarefas));
-  }, [tarefas]);
+  if (!usuario?.nome) return;
+
+  localStorage.setItem(
+    `tarefas_${usuario.nome}`,
+    JSON.stringify(tarefas)
+  );
+}, [tarefas, usuario]);
 
   const handleSubmit = (e) => {
   e.preventDefault();
 
-  if (tarefa.valor === "") return;
+  if (!inputTarefa.valor.trim()) return;
 
   const nova = {
     id: Date.now(),
-    usuario: usuario.nome,
-    texto: tarefa.valor,
+    usuario: usuario?.nome,
+    texto: inputTarefa.valor,
     concluida: false
   };
 
   setTarefas((prev) => [...prev, nova]);
-  tarefa.limpar();
+  inputTarefa.limpar();
 };
 
 
@@ -77,11 +90,12 @@ const removerTarefa = useCallback((id) => {
 return (
   <>
     <form className={styles.form} onSubmit={handleSubmit}>
-      <input className={styles.input}
+      <input
+        className={styles.input}
         type="text"
         placeholder="Digite uma nova tarefa"
-        value={tarefa.valor}
-        onChange={tarefa.onChange}
+        value={inputTarefa.valor}
+        onChange={inputTarefa.onChange}
       />
       <button className={styles.button} type="submit">Adicionar</button>
     </form>
@@ -95,7 +109,7 @@ return (
       
       {tarefas 
         // mostra apenas tarefas do usuário logado
-        .filter((tarefa) => tarefa.usuario === usuario.nome)
+        .filter((tarefa) => tarefa.usuario === usuario?.nome)
         .filter((tarefa) => {
         // aplica o filtro selecionado (todas, pendentes ou concluídas)  
           if (filtro === "pendentes") return !tarefa.concluida;

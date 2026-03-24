@@ -1,25 +1,35 @@
-import { useContext } from "react";
 import { useInput } from "../../hooks/useInput";
-import { UserContext } from "../../contexts/UserContext";
-import {Form, Input, Botao} from './style'
-
+import { Form, Input, Botao } from './style';
+import { useSetRecoilState } from "recoil";
+import { userState } from "../../state/user";
 
 function Login(){
     const nomeDoUsuario = useInput();
-    const {setUsuario} = useContext(UserContext);
-    const handlelogin =(e) => {
+
+    const setUsuario = useSetRecoilState(userState);
+
+    const handlelogin = (e) => {
         e.preventDefault();
-        setUsuario({nome: nomeDoUsuario.valor, estaLogado: true});
+
+        if (!nomeDoUsuario.valor.trim()) return;
+
+        setUsuario({
+            nome: nomeDoUsuario.valor,
+            estaLogado: true
+        });
     }
+
     return(
         <Form onSubmit={handlelogin}>
-            <Input  type="text" placeholder="Digite seu nome"
-            value={nomeDoUsuario.valor}
-            onChange={nomeDoUsuario.onChange} />
+            <Input
+                type="text"
+                placeholder="Digite seu nome"
+                value={nomeDoUsuario.valor}
+                onChange={nomeDoUsuario.onChange}
+            />
             <Botao type="submit">Entrar</Botao>
         </Form>
-
-    )
+    );
 }
 
-export default Login;
+export default Login;   
