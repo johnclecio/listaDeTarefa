@@ -12,14 +12,16 @@ const Item = styled.li`
 `;
 
 const Botao = styled.button`
-    padding: 10px 10px;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  padding: 10px 10px;
+  background-color: #4caf50; /* adiciona isso */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 
-    
-
+  &:hover {
+    background-color: #388e3c;
+  }
 `;
 const BotaoAlerta = styled(Botao)`
     background-color: #f44138;
@@ -29,6 +31,11 @@ const BotaoAlerta = styled(Botao)`
       
     }
 `;
+
+const Actions = styled.div`
+  display: flex;
+  gap: 8px;
+`;  
 
 const TextItem = styled.span`
   text-decoration: ${({ $concluida }) =>
@@ -41,29 +48,29 @@ const TextItem = styled.span`
 
 function Tarefa({ texto, concluida, onToggle, onRemover }) {
 
-  const handleClick = () => {
-    if (concluida) {
-      onRemover();
-    } else {
-      onToggle();
-    }
-  };
+
 
   return (
-    <Item >
-      <input 
-        type="checkbox"
-        checked={concluida}
-        onChange={onToggle}
-      />
+        <Item>
+        <input 
+          type="checkbox"
+          checked={concluida}
+          onChange={onToggle}
+        />
 
-      <TextItem $concluida={concluida}>
-        {texto}
-      </TextItem>
+        <TextItem $concluida={concluida}>
+          {texto}
+        </TextItem>
 
-      <BotaoAlerta onClick={handleClick}>
-        {concluida ? "Remover" : "Concluída"}
-      </BotaoAlerta>
+        <Actions>
+        <Botao onClick={onToggle}>
+          {concluida ? "Desfazer" : "Concluir"}
+        </Botao>
+
+        <BotaoAlerta onClick={onRemover}>
+          Remover
+        </BotaoAlerta>
+      </Actions>
     </Item>
   );
 }
