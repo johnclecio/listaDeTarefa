@@ -99,33 +99,32 @@ npm run dev
 
 ## 📁 Estrutura do Projeto
 
-```bash
-src/
-├── atomo/
-│   ├── user.js
-│   └── tarefas.js
-│
-├── selector/
-│   ├── filter.js
-│   ├── tarefasSelector.js
-│   └── tarefasCount.js
-│
-├── components/
-│   ├── ListaTarefas.module.css
-│   ├── ListaTarefa.jsx
-|   |── Tarefa.jsx
-│   └── Login/
-|       └── index.jsx 
-|       ├── style.jsx    
-│
-├── hooks/
-│   └── useInput.js
-│
-├── App.jsx
-└── main.jsx
-├── assets/
-|   └── preview.png 
-```
+    src/
+    ├── atomo/
+    │   ├── user.js
+    │   └── tarefas.js
+    │
+    ├── selector/
+    │   ├── filter.js
+    │   ├── tarefasSelector.js
+    │   └── tarefasCount.js
+    │
+    ├── components/
+    │   ├── ListaTarefas.module.css
+    │   ├── ListaTarefa.jsx
+    │   ├── Tarefa.jsx
+    │   └── Login/
+    │       ├── index.jsx
+    │       └── style.jsx
+    │
+    ├── hooks/
+    │   └── useInput.js
+    │
+    ├── assets/
+    │   └── preview.png
+    │
+    ├── App.jsx
+    └── main.jsx
 
 ---
 
