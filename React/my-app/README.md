@@ -74,7 +74,7 @@ A aplicação utiliza **Recoil** para gerenciamento global:
 Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/johnclecio/seu-repositorio.git
 ```
 
 Acesse a pasta:
