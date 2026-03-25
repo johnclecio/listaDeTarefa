@@ -1,20 +1,30 @@
 
+import { useEffect, useCallback } from "react";
+import { useRecoilState, useRecoilValue } from "recoil";
+
 import Tarefa from "./tarefa";
 import { useInput } from "../hooks/useInput";
-import {useEffect, useState, useCallback } from "react";
 import styles from './ListaTarefa.module.css';
-import  {userState}  from "../state/user";
-import { useRecoilValue } from "recoil";
+
+import { userState } from "../atomo/user";
+import { tarefasState } from "../atomo/tarefas";
+
+import { filtroState } from "../selector/filter";
+import { tarefasFiltradasState } from "../selector/tarefasSelector";
+
 
 
 
 
 function ListaTarefas(){
   //estado que controla o filtro de exibição das tarefas (todas, pendentes, concluídas)
-  const [filtro, setFiltro] = useState("todas");
+  const [filtro, setFiltro] = useRecoilState(filtroState);
+  const tarefasFiltradas = useRecoilValue(tarefasFiltradasState);
+
+  
 
   // estado que armazena a lista de tarefas
-  const [tarefas, setTarefas ]= useState([]);
+  const [tarefas, setTarefas ]= useRecoilState(tarefasState);
 
   // hook customizado que controla o valor do input da tarefa
   const inputTarefa = useInput();
@@ -30,11 +40,11 @@ const alternarStatus = useCallback((id) => {
       t.id === id ? { ...t, concluida: !t.concluida } : t
     )
   );
-}, []);
+}, [setTarefas]);
 // remove Tarefa 
 const removerTarefa = useCallback((id) => {
   setTarefas((prev) => prev.filter((t) => t.id !== id));
-}, []);
+}, [setTarefas]);
 
 
 
@@ -53,7 +63,7 @@ const removerTarefa = useCallback((id) => {
       } else {
         setTarefas([]);
       }
-    }, [usuario]);
+    }, [usuario, setTarefas]);
 
   // salvar tarefas no localStorage sempre que mudar
   useEffect(() => {
@@ -106,25 +116,15 @@ return (
     </div>
 
     <ul className={styles.list}>
-      
-      {tarefas 
-        // mostra apenas tarefas do usuário logado
-        .filter((tarefa) => tarefa.usuario === usuario?.nome)
-        .filter((tarefa) => {
-        // aplica o filtro selecionado (todas, pendentes ou concluídas)  
-          if (filtro === "pendentes") return !tarefa.concluida;
-          if (filtro === "concluidas") return tarefa.concluida;
-          return true;
-        })
-          .map((tarefa) => (
-          <Tarefa 
-              key={tarefa.id}
-              texto={tarefa.texto}
-              concluida={tarefa.concluida}
-              onToggle={() => alternarStatus(tarefa.id)}
-              onRemover={() => removerTarefa(tarefa.id)}
-          />))}
-        
+      {tarefasFiltradas.map((tarefa) => (
+        <Tarefa 
+          key={tarefa.id}
+          texto={tarefa.texto}
+          concluida={tarefa.concluida}
+          onToggle={() => alternarStatus(tarefa.id)}  
+          onRemover={() => removerTarefa(tarefa.id)}
+        />
+      ))}
     </ul>
   </>
 );

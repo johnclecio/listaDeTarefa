@@ -31,8 +31,10 @@ const BotaoAlerta = styled(Botao)`
 `;
 
 const TextItem = styled.span`
-    text-decoration: ${({concluida}) => (concluida ? "line-through" : "none" )} ;
-    color: ${({concluida}) => (concluida ? "gray" : "#000" )};  
+  text-decoration: ${({ $concluida }) =>
+    $concluida ? "line-through" : "none"};
+  color: ${({ $concluida }) =>
+    $concluida ? "gray" : "#000"};
 `;
 
 
@@ -55,7 +57,7 @@ function Tarefa({ texto, concluida, onToggle, onRemover }) {
         onChange={onToggle}
       />
 
-      <TextItem concluida={concluida}>
+      <TextItem $concluida={concluida}>
         {texto}
       </TextItem>
 

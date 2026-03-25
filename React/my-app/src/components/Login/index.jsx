@@ -1,7 +1,7 @@
 import { useInput } from "../../hooks/useInput";
 import { Form, Input, Botao } from './style';
 import { useSetRecoilState } from "recoil";
-import { userState } from "../../state/user";
+import { userState } from "../../atomo/user";
 
 function Login(){
     const nomeDoUsuario = useInput();
