@@ -111,15 +111,20 @@ src/
 │   └── tarefasCount.js
 │
 ├── components/
-│   ├── ListaTarefas/
-│   ├── Tarefa/
+│   ├── ListaTarefas.module.css
+│   ├── ListaTarefa.jsx
+|   |── Tarefa.jsx
 │   └── Login/
+|       └── index.jsx 
+|       ├── style.jsx    
 │
 ├── hooks/
 │   └── useInput.js
 │
 ├── App.jsx
 └── main.jsx
+├── assets/
+|   └── preview.png 
 ```
 
 ---
