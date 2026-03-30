@@ -1,6 +1,6 @@
 
 export type Reclamacao = {
-    id: number;
+    _id?: number;
     nome: string;
     mensagem: string;
 };

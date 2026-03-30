@@ -16,7 +16,7 @@ const FormularioReclamacao = ({aoEnviar} : Props) =>{
           e.preventDefault();
           if(!nome || !mensagem) return;
 
-          aoEnviar({id: 0, nome, mensagem});
+          aoEnviar({nome, mensagem});
           setNome('');
           setMensagem('');
      }    

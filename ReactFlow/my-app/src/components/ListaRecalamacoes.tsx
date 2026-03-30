@@ -14,7 +14,7 @@ const ListaReclamacoes =({reclamacoes }: Props) => {
         return(
             <div className={style.div}>
                 {reclamacoes.map(item => (
-                <ItemReclamacao key={item.id} reclamacao={item} />
+                <ItemReclamacao key={item._id} reclamacao={item} />
             ))}
 
             </div>
