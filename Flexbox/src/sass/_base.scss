@@ -1,0 +1,23 @@
+
+@use 'variaveis';
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Ajuste de largura e overflow */
+html,
+body {
+    margin-top: 10px;
+    width: 100%;
+    overflow-x: hidden;
+    background: variaveis.$cor-de-fundo;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+

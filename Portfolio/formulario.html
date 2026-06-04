@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<style>
+    *{
+        background-color: rgb(207, 207, 207);
+    }
+    section{
+        border: solid 3px black;
+        margin-block: 100px;
+    }
+    form{
+        border: solid 2px black;
+        width: 250px;
+        padding: 30px;
+        margin-inline: auto;
+        
+    }
+    label{
+        display: block;
+    }
+    button{
+        display: block;
+        background-color: black;
+        color: white;
+        width: 200px;
+
+    }
+    button:hover{
+        background-color: red;
+    }
+</style>
+<body>
+    <section>
+        <form action="processa-formulario.php" method="post">
+                <label for="name">Nome:</label> 
+                <input type="text" id="name" name="name" required placeholder="seunome">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="seuemail@gmail.com">
+
+                <label for="assunto">Assunto</label>
+                <select name="assunto" id="assunto">
+                    <option value="orcamento">Orçamento</option>
+                    <option value="outros">Outros</option>
+                </select>
+
+                <label for="msg">Mensagem</label>
+            
+                <textarea id="msg" name="msg"  cols="21" rows="5" placeholder="escreva">
+                </textarea>
+
+                <button type="submit">Enviar</button>
+        </form>
+
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+<style>
+ body{
+        background-image: url(IA.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        filter: brightness(0.7);
+    }
+    *{
+        color: white;
+        padding: 10px;
+        margin: 0px;
+    }
+    h1, h2, h3 , li{
+        text-align: center;
+    }
+    img {
+        width: 100%;
+    }
+    ul{
+        list-style: none;
+    }
+    li a{
+        text-decoration: none;
+    }
+   
+    #content{
+        text-align: center;
+    }
+    #presente, #futuro, #contato{
+        margin-top: 200px;
+    }
+    article{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+
+    }
+    form{
+        border: solid 2px black;
+        width: 250px;
+        padding: 30px;
+        margin-inline: auto;
+        
+        
+    }
+    label{
+        display: block;
+    }
+    button{
+        display: block;
+        background-color: wheat;
+        color: white;
+        width: 200px;
+
+    }
+    button:hover{
+        background-color: red;
+    }
+    footer {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+   
+</style>
+</head>
+
+<body>
+    <header>
+        <h1>IA</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="#passado">Passado</a></li>
+                <li><a href="#presente">Presente</a></li>
+                <li><a href="#futuro">Futuro</a></li>
+                <li><a href="#contato">Mais</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <img src="https://leadmark.com.br/wp-content/uploads/2024/04/img-cMHB3eJFoxceL7l9jhL7nLNf-min.jpg" alt="IA">
+        </section>
+        <section id="content">
+            <section>
+                <h2>Linha do tempo</h2>
+            </section>
+            <section id="passado">
+                <h3>O Sonho Matemático (1950–1952)</h3>
+                <article>
+                    <p>
+                        1950 - O Teste de Turing: Alan Turing publica "Computing Machinery and Intelligence", propondo que se uma máquina pudesse enganar um humano em uma conversa, ela poderia ser considerada "inteligente"        
+                        1951 - Os Primeiros Programas: Christopher Strachey escreveu um programa de damas e Dietrich Prinz um de xadrez para o computador Ferranti Mark 1, as primeiras demonstrações práticas de máquinas resolvendo problemas lógicos.
+                        1952 - O Primeiro Aprendizado de Máquina: Arthur Samuel desenvolve o Samuel Checkers-Playing Program, o primeiro programa capaz de aprender e melhorar seu desempenho jogando contra si mesmo.
+                    </p>
+                </article>
+                <h3>O Nascimento Formal (1955–1956)</h3>
+                <article>
+                    <p>
+                        1955 - A Proposta: John McCarthy, Marvin Minsky, Nathaniel Rochester e Claude Shannon redigem a proposta para um seminário de verão no Dartmouth College.
+                        1956 - A Conferência de Dartmouth: O evento de dois meses em que McCarthy cunhou oficialmente o termo "Inteligência Artificial". O objetivo era ambicioso: descrever cada aspecto do aprendizado ou inteligência de forma tão precisa que uma máquina pudesse simulá-lo.
+                        1956 - Logic Theorist: Allen Newell, Herbert Simon e Cliff Shaw apresentam o primeiro programa projetado especificamente para imitar as habilidades de resolução de problemas de um ser humano, provando 38 dos 52 teoremas do Principia Mathematica. 
+                    </p>
+                </article>
+                <h3>A Infraestrutura e os Primeiros Neurônios (1957–1959)</h3>
+                <article>
+                    <p>
+                        1957 - O Perceptron: Frank Rosenblatt inventa o Perceptron no Cornell Aeronautical Laboratory. Ele foi o primeiro modelo de rede neural capaz de aprender a reconhecer padrões através de tentativa e erro, sendo o avô direto do Deep Learning que usamos hoje.
+                        1958 - Linguagem LISP: John McCarthy cria a linguagem de programação Lisp, que se tornou o padrão para o desenvolvimento de IA por décadas devido à sua flexibilidade em lidar com listas e símbolos.
+                        1959 - Termo "Machine Learning": Arthur Samuel define formalmente o termo "Aprendizado de Máquina" como o campo de estudo que dá aos computadores a habilidade de aprender sem serem explicitamente programados.
+                    </p>
+                </article>
+            </section>
+            <section id="presente">
+                <h3>A Retomada e o Big Data (2000–2010)</h3>
+                <article>
+                    <p>
+                        2002 - Roomba: O lançamento do primeiro aspirador robótico popularizou a ideia de agentes inteligentes autônomos em casa.
+                        2004/2005 - Desafios da DARPA: Competições de veículos autônomos aceleraram o desenvolvimento de visão computacional e sensores.
+                        2006 - O Renascimento das Redes Neurais: Geoffrey Hinton e outros pesquisadores introduziram métodos para treinar "Redes Neurais Profundas", o que hoje chamamos de Deep Learning.
+                    </p>
+                </article>
+                <h3>A Explosão do Deep Learning (2011–2015)</h3>
+                <article>
+                    <p>
+                        2011 - IBM Watson no Jeopardy!: O supercomputador da IBM derrotou os maiores campeões humanos do programa de perguntas e respostas, mostrando o poder do processamento de linguagem natural.
+                        2011 - Siri (Apple): A IA chegou ao bolso de milhões de pessoas, inaugurando a era dos assistentes virtuais de voz.
+                        2012 - O Momento "AlexNet": Uma rede neural convolucional venceu a competição ImageNet com uma margem absurda, provando que o Deep Learning era o caminho para a visão computacional moderna.
+                        2014 - GANs: Ian Goodfellow inventou as Redes Adversárias Generativas, permitindo que IAs criassem imagens realistas, o embrião da IA generativa atual
+                    </p>
+                </article>
+                <h3> A Era da Superação Humana (2016–2020)</h3>
+                <article>
+                    <p>
+                        2016 - AlphaGo (Google DeepMind): Pela primeira vez, uma IA derrotou o campeão mundial Lee Sedol no jogo Go, considerado muito mais complexo que o xadrez por exigir "intuição".
+                        2017 - O Transformer: O Google publicou o artigo "Attention Is All You Need", criando a arquitetura de Transformers que permitiu o surgimento de modelos como o GPT.
+                        2018 - BERT e GPT-1: O Google e a OpenAI lançaram modelos que revolucionaram a forma como as máquinas entendem o contexto da linguagem humana.
+                        2020 - AlphaFold 2 e GPT-3: A DeepMind resolveu o problema de 50 anos do dobramento de proteínas, e o GPT-3 mostrou que a IA já podia escrever textos quase indistinguíveis dos humanos.
+                    </p>
+                </article>
+            </section>
+            <section id="futuro">
+                <h3>AGI e Além (Inteligência Artificial Geral)</h3>
+                <article>
+                    <p>
+                        Em 2046, a discussão não será mais se a AGI é possível, mas como conviver com ela.
+                        Sistemas Auto-Evolutivos: Espera-se que as IAs projetem suas próprias atualizações de hardware e software, acelerando o progresso científico em velocidades que o cérebro humano não consegue acompanhar sozinho.
+                        IA de "Propósito Científico": Poderemos ter sistemas que operam laboratórios automatizados 24/7, descobrindo novos materiais e curas para doenças complexas em semanas, algo que antes levava décadas.
+                    </p>
+                </article>
+                <h3>Interface Cérebro-Máquina (O Fim da Digitação)</h3>
+                <article>
+                    <p>
+                        A forma como você e eu estamos interagindo agora parecerá "pré-histórica".
+                        Telepatia Sintética: Com a evolução de tecnologias como o Neuralink, a interação com a IA poderá ser feita via pensamento. A informação não será mais lida, mas "baixada" ou integrada à memória de curto prazo.
+                        Simbiose Cognitiva: A IA funcionará como um "terceiro hemisfério" cerebral, auxiliando na tomada de decisões e na regulação emocional em tempo real.
+                    </p>
+                </article>
+                <h3>Economia Pós-Escassez e o Trabalho</h3>
+                <article>
+                    <p>
+                        Personalização Absoluta: Tudo o que você consome (filmes, jogos, móveis, remédios) será gerado sob demanda por IAs e fabricado localmente por nanorrobótica ou impressão 3D avançada.
+                        Redefinição do Valor Humano: Com a automação de quase todas as tarefas técnicas e criativas, a economia poderá migrar para o "Capitalismo de Cuidado" ou lazer, onde o toque humano e a experiência física se tornam os bens mais luxuosos.
+                    </p>
+                </article>
+                <h3>IA no Espaço e a Singularidade Ambiental</h3>
+                <article>
+                    <p>
+                        Exploração Autônoma: Enxames de robôs inteligentes estarão minerando asteroides ou construindo as primeiras bases em Marte sem intervenção humana direta.
+                        Gestão Planetária: Uma "IA climática" poderá gerenciar em tempo real redes de energia globais e esforços de geoengenharia para estabilizar o clima da Terra.
+                        O grande debate de 2046: Provavelmente não será mais sobre "produtividade", mas sobre direitos sintéticos e a preservação da identidade humana em um mundo onde a distinção entre o natural e o artificial terá praticamente desaparecido.
+                    </p>
+                </article>
+            </section>
+
+        </section>
+        <section id="contato">
+            
+            <fieldset>
+                <h3>Entre em contato e deixe seu comentário aqui</h3>
+                <form action="mailto:johnclecio.21@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Name:</label>
+                    <input type="text" name="nome" id="name" required placeholder="seunome">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="seuemail@gmail.com">
+                    <label for="assunto">Assunto</label>
+                <select name="assunto" id="assunto">
+                    <option value="like">Like</option>
+                    <option value="deslike">Dislike</option>
+                </select>
+
+                <label for="msg">Mensagem</label>
+            
+                <textarea id="msg" name="msg"  cols="21" rows="5" placeholder="escreva">
+                </textarea>
+
+                <button type="submit">Enviar</button>
+                </form>
+            </fieldset>
+        </section>
+        
+        
+    </main>
+    <footer>
+        <p>&COPY; todos direitos reservados 2025</p>
+        <p>Contatos</p>
+        <a href="https://github.com/johnclecio" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/johnmaclima/">Linkedin</a>
+    </footer>
+    
+</body>
+</html>

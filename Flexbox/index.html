@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agência Criativa Web em Pacatuba especializada em sites, landing pages e marketing digital.">
+    <link rel="stylesheet" href="src/css/estilos.css">
+    <script src="src/js/script.js" defer></script>
+    <title>Agência Criativa Web</title>
+</head>
+<body>
+    <!-- Container principal que organiza o layout em Grid -->
+
+    <div class="container">
+        <!-- Cabeçalho do site contendo a logo -->
+
+        <header class="header container__header">
+            <div class="header__logo">
+                Criativa <span class="header__highlight">Web</span>
+            </div>
+        </header>
+       <nav class="container__nav nav">
+            <!-- Menu de navegação principal com links internos -->
+
+            <div class="nav__menu" onclick="toggleMenu(this)">
+                <div class="nav__bar1"></div>
+                <div class="nav__bar2"></div>
+                <div class="nav__bar3"></div>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" data-section="header" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#" data-section="main" class="nav__link">Sobre Nós</a></li>
+                <li class="nav__item"><a href="#" data-section="section" class="nav__link">Serviços</a></li>
+                <li class="nav__item"><a href="#" data-section="aside" class="nav__link">Depoimentos</a></li>
+                <li class="nav__item"><a href="#" data-section="footer"  class="nav__link">Contato</a></li>
+            </ul>
+       </nav>
+       
+       <!-- Conteúdo principal do site (história e informações da empresa) -->
+
+    <main class="main container__main">
+            <!-- Imagem responsiva utilizando srcset para mobile, tablet e desktop -->
+
+            <img 
+                    class="main__img"
+                    src="src/img/web-desktop.png"
+                    srcset="
+                        src/img/web-mobile.png 400w,
+                        src/img/web-tablet.png 800w,
+                        src/img/web-desktop.png 1200w
+                    "
+                    sizes="(max-width: 768px) 100vw, 1200px"
+                    alt="Fachada da Agência Criativa Web">
+
+            <h2 class="main__title">Agência de Criativa Web</h2>
+            <h3 class="main__title--sub">Nossa História – Pacatuba, Ceará</h3>
+            <p class="main__text">
+                Fundada no coração de Pacatuba, a Agência de Criativa Web nasceu de um sonho simples:
+                provar que grandes ideias não precisam nascer nas capitais — elas podem surgir de qualquer 
+                lugar, inclusive do interior do Ceará.
+            </p>
+            <h3 class="main__title--sub">O Começo</h3>
+            <p class="main__text">
+                Em 2021, três amigos apaixonados por tecnologia, design e negócios decidiram transformar talento em oportunidade. Trabalhando inicialmente de casa, com apenas dois notebooks e muita determinação, começaram ajudando pequenos comércios locais a criarem presença digital.
+
+                A primeira oportunidade veio de um mercadinho do bairro Jereissati. Um site simples, mas feito com cuidado. Em poucos meses, o negócio dobrou o número de clientes vindos das redes sociais.
+
+                Ali, a agência entendeu seu propósito:
+                impulsionar negócios locais através da internet.
+            </p>
+            <h3 class="main__title--sub">Crescimento e Expansão</h3>
+            <h4 class="main__title--sub">
+                Com o aumento da demanda, a agência passou a oferecer:
+            </h4>
+            <!--Lista de serviços -->
+            <ul class="main__lista-servicos">
+                <li class="main__item">Desenvolvimento de sites institucionais</li>
+                <li class="main__item">Landing pages de alta conversão</li>
+                <li class="main__item">Identidade visual</li>
+                <li class="main__item">Gestão de tráfego pago</li>
+                <li class="main__item">Sistemas web personalizados</li>
+            </ul>
+
+            <p class="main__text">
+                Empresas de cidades vizinhas como Maracanaú e Fortaleza começaram a procurar os serviços da equipe.
+
+                O que começou pequeno se transformou em referência regional.
+            </p>
+            <h3 class="main__title--sub">Nossa Filosofia</h3>
+            <h4 class="main__title--sub">Acreditamos que:</h4>
+            
+            <ul class="main__lista-filosofia">
+                <li class="main__item">Cada marca tem uma história única</li>
+                <li class="main__item">Tecnologia é ferramenta, não solução mágica</li>
+                <li class="main__item">Design precisa gerar resultado</li>
+                <li class="main__item">Estratégia vem antes do código</li>
+            </ul>
+
+            
+            <p class="main__text">
+                Nosso diferencial não está apenas no desenvolvimento, mas na visão estratégica de crescimento digital.
+            </p>
+            <h3 class="main__title--sub">Hoje</h3>
+            <p class="main__text">
+                Hoje, a Agência de Criativa Web atende clientes em todo o Brasil, mantendo sua essência em Pacatuba.
+            </p>
+           <h4 class="main__title--sub">Somos uma empresa que valoriza:</h4>
+
+            <ul class="main__lista-valores">
+                <li class="main__item">Inovação</li>
+                <li class="main__item">Proximidade com o cliente</li>
+                <li class="main__item">Resultados reais</li>
+                <li class="main__item">Crescimento sustentável</li>
+            </ul>
+            
+    </main>
+
+    <!-- Seção de serviços oferecidos pela agência -->
+    <section class="container__section section">
+            <h3 class="section__title">Nossos Serviços</h3>
+
+            <div class="section__servico">
+                <h4 class="section__title--sub">Desenvolvimento de Sites</h4>
+                <p class="section__text">Criamos sites modernos, rápidos e responsivos, pensados para gerar autoridade e atrair clientes.</p>
+            </div>
+
+            <div class="section__servico">
+                <h4 class="section__title--sub">Landing Pages</h4>
+                <p class="section__text">Páginas estratégicas focadas em transformar visitantes em clientes.</p>
+            </div>
+
+            <div class="section__servico">
+                <h4 class="section__title--sub">Identidade Visual</h4>
+                <p class="section__text">Construímos marcas fortes e memoráveis para seu negócio.</p>
+            </div>
+
+            <div class="section__servico">
+                <h4 class="section__title--sub">Tráfego Pago</h4>
+                <p class="section__text">Campanhas estratégicas para atrair clientes qualificados.</p>
+            </div>
+
+            <div class="section__servico">
+                <h4 class="section__title--sub">Sistemas Web</h4>
+                <p class="section__text">Soluções digitais personalizadas para automatizar processos.</p>
+            </div>
+   </section>
+
+    <!-- Área lateral contendo depoimentos de clientes -->
+    <aside class="aside container__aside">
+            <h3 class="aside__title">Depoimentos</h3>
+
+            <div class="aside__card">
+                <p class="aside__text">"A Criativa Web transformou totalmente a presença digital da nossa empresa. Atendimento excelente e resultado rápido."</p>
+                <span class="aside__author">- Carlos Silva, Empresário</span>
+            </div>
+
+            <div class="aside__card">
+                <p class="aside__text">"Nosso site ficou moderno e começamos a receber muito mais contatos pelo WhatsApp."</p>
+                <span class="aside__author">- Mariana Souza, Loja Local</span>
+            </div>
+
+            <div class="aside__card">
+                <p class="aside__text">"Profissionais criativos, comprometidos e estratégicos. Recomendo demais!"</p>
+                <span class="aside__author">- João Mendes, Consultor</span>
+            </div>
+    </aside>
+
+
+        <!-- Rodapé com informações de contato e formulário -->
+        <footer class=" footer container__footer">
+            <h2 class="footer__title">Informações para Contatos</h2>
+            <div class="footer__endereco">
+                <p>Rua Atriz Nº 101</p>
+                <p>Centro - Pacatuba - CE</p>
+                <p>Telefone:(85)9-01020304</p>
+                <p>Email: contato@criativaweb.com.br</p>
+
+            </div>
+
+            <!-- Formulário para envio de mensagem -->
+           <form class="footer__form">
+                <h2 class="footer__title--sub">Deixe sua mensagem</h2>
+
+                <label for="nome" class="footer__form--label">Nome:</label>
+                <input type="text"  id="nome" class="footer__form--input">
+
+                <label for="email" class="footer__form--label">Email:</label>
+                <input type="email"  id="email" class="footer__form--input">
+
+                <label for="mensagem" class="footer__form--label">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" class="footer__form--textarea"></textarea>
+
+
+                <button type="submit" class="footer__form--button">Enviar</button>
+           </form>
+            <!-- Direitos autorais do site -->
+            <p>© 2026 - John Lima</p>
+        </footer>
+        
+
+    </div>
+</body>
+</html>

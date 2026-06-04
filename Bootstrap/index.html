@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Estilo Livre</title>
+    <style>
+        /*configurando imagem*/
+    .carousel-item img {
+    height: 500px; 
+    object-fit: cover; 
+}
+
+#carouselDepoimentos .carousel-control-prev-icon,
+#carouselDepoimentos .carousel-control-next-icon {
+    filter: invert(1); /* deixa branco */
+    background-color: #198754; /* verde bootstrap */
+    border-radius: 50%;
+    padding: 15px;
+}
+
+/**/
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+}
+    </style>
+</head>
+<body>
+    <!--Navegacao-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container-fluid">
+        <img src="src/img/logo.png" alt="logo-marca">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#sobre">Sobre Nós</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#servico">Serviço</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#depoimento">Depoimento</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+        <!--header-->
+        <header class="bg-dark text-white text-center py-5">
+            <div class="container">
+                <h1 class="fw-bold display-4">Estilo Livre</h1>
+                <p class="lead">Cortes modernos, barba alinhada e atendimento de respeito.</p>
+                <a href="#formulario" class="btn btn-success btn-lg mt-3">
+                    Agende Seu Horário
+                </a>
+            </div>
+        </header>
+
+        
+        
+        <!--carrosel-->
+        <section id="sobre" class="py-5">
+            <div class="container">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="src/img/2018.png" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block text-success fw-bold bg-dark bg-opacity-50 rounded p-3">
+                            <h5>2018</h5>
+                            <p>nascia o sonho da Estilo Livre: elevar a autoestima masculina com excelência e tradição.</p>
+                        </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                        <img src="src/img/2022.png" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block text-success fw-bold">
+                            <h5>2022</h5>
+                            <p>Um ano de grandes desafios que moldaram nossa resistência e consolidaram nossa marca no mercado.</p>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                        <img src="src/img/2026.png" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block text-success fw-bold">
+                            <h5>2026</h5>
+                            <p>Obrigado a cada cliente que faz parte da nossa história. Chegamos até aqui porque vocês acreditam no nosso Estilo.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <h2 class="text-center fw-bold mb-5">Sobre Nós</h2>
+                <h3 class="text-center mb-5">História da Barbearia Estilo Livre</h3>
+                <p class="text-justify lh-lg">
+                    A Barbearia Estilo Livre nasceu com a ideia de ir além do simples corte de cabelo.
+                    Desde o início, o propósito sempre foi oferecer um espaço onde cada cliente pudesse
+                    expressar sua personalidade através do próprio visual.
+                    <hr>
+                    Inspirada na tradição das barbearias clássicas — aquelas de conversa boa, respeito
+                    e atendimento de qualidade — a Estilo Livre uniu o melhor do tradicional com as tendências modernas.
+                    Aqui, técnica, precisão e estilo caminham juntos.
+                    <hr>
+                    Mais do que uma barbearia, construímos um ambiente de confiança, onde cada corte é feito com atenção
+                    aos detalhes e cada cliente é atendido de forma única. Do degradê moderno ao corte social, da barba 
+                    alinhada à transformação completa, nosso compromisso é entregar qualidade e elevar a autoestima de quem passa pela cadeira.
+                </p>
+            </div>
+
+
+        </section>
+        <!--Card do Serviços-->
+        <section id="servico" class="py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-5">Serviço</h2>
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+                        <div class="card" style="width: 12rem;">
+                            <img src="src/img/1.png" class="img-thumbnail" alt="corte-degrade">
+                            <div class="card-body">
+                                <h5 class="card-title">Degradê</h5>
+                                <p class="card-text">Na barbearia, o degradê exige técnica, precisão e atenção aos detalhes.</p>
+                                <a href="#formulario" class="btn btn-primary">Agendar Agora</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+                        <div class="card" style="width: 12rem;">
+                            <img src="src/img/2.png" class="img-thumbnail" alt="corte-barba">
+                            <div class="card-body">
+                                <h5 class="card-title">Barba</h5>
+                                <p class="card-text">O combo para o homem moderno. Alinhamento de fios com técnica avançada.</p>
+                                <a href="#formulario" class="btn btn-primary">Agendar Agora</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+                        <div class="card" style="width: 12rem;">
+                            <img src="src/img/3.png" class="img-thumbnail" alt="Mudança --de-Visual">
+                            <div class="card-body">
+                                <h5 class="card-title">Visual</h5>
+                                <p class="card-text">Nossos barbeiros são especialistas em coloração para reforçar sua personalidade.</p>
+                                <a href="#formulario" class="btn btn-primary">Agendar Agora</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--card do depoimentos -->
+        <section id="depoimento" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-5">Depoimentos</h2>
+
+                <div id="carouselDepoimentos" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner text-center">
+
+                        <div class="carousel-item active">
+                            <p class="lead">"O melhor corte da região! Atendimento impecável."</p>
+                            <h5 class="fw-bold">João Silva</h5>
+                        </div>
+
+                        <div class="carousel-item">
+                            <p class="lead">"Ambiente moderno e barbeiros extremamente profissionais."</p>
+                            <h5 class="fw-bold">Ricardo Alves</h5>
+                        </div>
+
+                        <div class="carousel-item">
+                            <p class="lead">"Depois que conheci a Estilo Livre, não troco mais!"</p>
+                            <h5 class="fw-bold">Marcos Oliveira</h5>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="formulario" class="py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-5">Agendar</h2>
+                <form action="">
+                <div class="mb-3">
+                    <label for="nome-completo" class="form-label">Nome Completo:</label>
+                    <input type="text" class="form-control" id="nome-completo">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1">
+                </div>
+                <button class="btn btn-success w-100">Enviar</button>
+                </form>
+                
+                
+            </div>
+        </section>
+
+        <footer class="bg-dark py-5">
+            <div class="container">
+                <p class="text-danger text-center">&copy; 2026 Todos os direitos reservado.</p>
+            </div>
+
+        </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

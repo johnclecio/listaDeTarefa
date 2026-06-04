@@ -1,0 +1,17 @@
+
+
+.formulario{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+
+}
+
+.input, .textarea{
+    margin-bottom: 16px;
+}
+
+.p, .div{
+    text-align: center;
+}

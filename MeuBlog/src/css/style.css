@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    
+}
+h1{
+    margin-top: 260px;
+}
+#botaoTema {
+  position: fixed;
+  top: 40px;     
+  right: 60px;
+  width: 60px;
+  height: 40px;
+  font-size: 20px;
+  background-color: rgb(193, 193, 193);
+  
+}
+#botaoTema:hover{
+    background-color: rgb(141, 138, 138);
+}
+h2{
+    margin-top: 30px;
+}
+
+
+main{
+    margin: 60px;
+}
+p{
+    margin-block: 20px;
+    text-align: justify;
+}
+
+body.dark {
+    color: #fff;
+    background-color: #000;
+}

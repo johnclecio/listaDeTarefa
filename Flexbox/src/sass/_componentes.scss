@@ -1,0 +1,263 @@
+
+@use 'variaveis';
+@use 'mixins';
+/* javaScript menu*/
+.nav__menu {
+    display: none;
+    background: none;
+    border: none;
+}
+
+
+/* Barra de navegação fixa no topo */
+.container__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  background: #8b5a2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav__list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  @include mixins.color-span;
+}
+
+/* Área principal de conteúdo */
+.container__main { 
+    text-align: center; 
+    font-size: 1rem;
+    
+}
+/* Imagem responsiva da agência */
+.main__img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.main__title{
+    padding-top: 100px;
+}
+.main__title--sub{
+    margin-block: 20px;
+}
+.main__text{
+    text-align: justify;
+}
+
+/* Estilização das listas de serviços, filosofia e valores */
+.main__lista-valores, .main__lista-filosofia, .main__lista-servicos {
+    list-style: none;
+}
+
+/* Itens das listas com efeito visual */
+.main__item {
+    background: linear-gradient(90deg, #111, #1e1e1e);
+    color: #fff;
+    padding: 14px 20px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border-left: 5px solid variaveis.$color-span;
+    transition: 0.3s ease;
+}
+
+.main__item:hover  {
+    transform: translateX(8px);
+    background: variaveis.$color-span;
+}
+
+
+/* Definição das áreas do Grid */
+
+/* Blocos laterais com fundo e bordas */
+.container__section,   .container__aside{
+
+    @include mixins.layout;
+   
+}
+/* section e aside*/
+.section__servico{
+    padding: 20px;
+    text-align: center;
+    
+}  
+
+.section__title, .aside__title {
+    margin-block: 40px;
+    font-size: 1.5rem;
+    
+    
+    
+} 
+.section__title--sub{
+    font-size: 1rem;
+    text-align: center;
+} 
+.section__text, .aside__text{
+    @include mixins.textLayoutSectionAside;
+}
+
+
+
+/* Cartões de depoimentos */
+.aside__card {
+    background: #111;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 12px;
+    border-left: 5px solid variaveis.$color-span;
+    transition: 0.3s ease;
+}
+
+.aside__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.aside__author {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: variaveis.$color-span;
+}
+
+/* Rodapé do site */
+/* Estilização do formulário de contato */
+.container__footer { 
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 20px;
+}
+
+
+.footer__form {
+    width: variaveis.$form-with;
+    max-width: variaveis.$form-max-width;
+}
+
+.footer__form--input,
+.footer__form--textarea,
+.footer__form--button {
+    width: 100%;
+    padding: 12px;
+    margin-block: 15px;
+    border-radius: 8px;
+    border: none;
+}
+
+.footer__form--button {
+    @include mixins.cor-button-back;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
+/* Botão do formulário com efeito hover */
+.footer__form--button:hover {
+    transform: scale(1.03);
+}
+
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 738px) {
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "main"
+            "section"
+            "aside"
+            "footer";
+    }
+
+    
+
+    .container__nav {
+        position: fixed; 
+        top: 0; 
+        left: 0;
+        width: 100%;
+        background: #8b5a2b;
+        z-index: 1000; 
+    }
+    .nav__list {
+        display: flex;
+        list-style: none; 
+        position: fixed; 
+        top: 0; 
+        right: 0; 
+        width: 80%; 
+        height: 100vh; 
+        padding: 60px 20px; 
+        background: linear-gradient(180deg, #1f4037, #99f2c8); 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 20px; transform: translateX(100%); transition: transform 0.3s ease, background-color 0.3s ease; 
+    }
+    .nav__list.active { 
+        transform: translateX(0);
+     }
+     /* Ícone do menu hambúrguer animado */ 
+     .nav__menu {
+         position: fixed;
+         top: 15px; 
+         right: 20px; 
+         display: inline-block; 
+         cursor: pointer; 
+         z-index: 2000; }
+
+
+   .nav__bar1, .nav__bar2, .nav__bar3 {
+     width: 35px; 
+     height: 5px; 
+     background-color: #fff; 
+     margin: 6px 0; 
+     transition: 0.4s; 
+    } 
+    .change .nav__bar1 { 
+    transform: translateY(11px) rotate(-45deg); 
+}   
+    .change .nav__bar2 {
+     opacity: 0; } 
+
+    .change .nav__bar3 {
+     transform: translateY(-11px) rotate(45deg); } 
+
+    .nav__menu.change { 
+    right: auto; 
+    left: 20px; } 
+
+   .container__header {
+    text-align: center;
+}
+.header__logo{
+    font-size: variaveis.$font-header_logo-menor;
+}
+     
+    .container__main { 
+    width: 90%; 
+    justify-self: center; 
+}
+}
