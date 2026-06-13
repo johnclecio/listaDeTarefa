@@ -4,7 +4,7 @@ import {filmes} from "@/src/lib/filmes";
 export default function Home() {
   return (
     <>
-    <Title title="filmes em destaque"/>
+    <Title title="Filmes em Destaque"/>
     
     <Grid filmes={filmes}/>
 

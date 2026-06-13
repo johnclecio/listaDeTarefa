@@ -1,4 +1,4 @@
-
+import styles from "./Title.module.css"
 
 type Props = {
     title : string
@@ -8,7 +8,7 @@ type Props = {
 const Title = ({title} : Props) =>{
 
     return(
-        <h2>{title}</h2>
+        <h2 className={styles.title}>{title}</h2>
 
     );
 }
