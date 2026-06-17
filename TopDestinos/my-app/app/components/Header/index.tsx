@@ -1,0 +1,27 @@
+import Link from "next/link";
+import styles from "./Header.module.css";
+
+
+const Header = () =>{
+
+    return(
+        <header className={styles.header}>
+            <div>
+            <h1 className={styles.header_logo}>
+                <Link  href="/">Bora Viajar!</Link>
+            </h1>
+            
+
+            <nav className={styles.header_nav}>
+            <Link href="/">Inicio</Link>    
+            <Link href="/destinos/asia">Asia</Link>
+            <Link href="/destinos/europa">Europa</Link>
+            <Link href="/destinos/america">America</Link>
+            </nav>
+
+            </div>
+        </header>
+    );
+}
+
+export default Header;
