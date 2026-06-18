@@ -1,15 +1,7 @@
-import Title from "@/app/components/Title";
+import Continente from "@/app/components/Continente";
 
+const Europa = () => {
+    return <Continente continente="Europa" />;
+};
 
-
-const Europa =() =>{
-
-    return(
-
-        <>
-        <Title title ="Europa"/>
-        </>
-    );
-
-}
 export default Europa;

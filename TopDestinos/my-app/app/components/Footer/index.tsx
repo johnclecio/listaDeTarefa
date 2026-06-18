@@ -1,13 +1,13 @@
+import styles from "./Footer.module.css";
 
+const Footer = () =>{
 
-const Footer = () => {
+    return(
 
-    return (
-
-        <footer>
-            Todos os direitos reservados 2026
+        <footer className={styles.footer}>
+            <p className={styles.footer_text}>Todos direitos reservados </p>
         </footer>
-    )
+    );
 }
 
 export default Footer;

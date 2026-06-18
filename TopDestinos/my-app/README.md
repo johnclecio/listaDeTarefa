@@ -1,36 +1,199 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌍 Portal de Destinos Turísticos
 
-## Getting Started
+## 📖 Sobre o Projeto
 
-First, run the development server:
+O Portal de Destinos Turísticos é uma aplicação desenvolvida com Next.js e TypeScript que permite aos usuários explorar destinos turísticos ao redor do mundo.
+
+O sistema apresenta informações sobre diferentes cidades, organizadas por continentes, permitindo uma navegação intuitiva entre as páginas e a visualização de detalhes de cada destino.
+
+Este projeto foi desenvolvido com o objetivo de praticar conceitos modernos de desenvolvimento Front-End utilizando React, Next.js, TypeScript e CSS Modules.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+* Next.js
+* React
+* TypeScript
+* CSS Modules
+* HTML5
+* JavaScript ES6+
+
+---
+
+## 📂 Estrutura do Projeto
+
+```text
+app/
+├── components/
+│   ├── Card/
+│   ├── Grid/
+│   ├── Title/
+│   └── Continente/
+│
+├── destinos/
+│   ├── page.tsx
+│   └── [id]/
+│       └── page.tsx
+│
+├── asia/
+├── europa/
+├── america/
+│
+├── lib/
+│   └── destino.ts
+│
+├── types/
+│   └── types.ts
+│
+└── page.tsx
+```
+
+---
+
+## ✨ Funcionalidades
+
+### Página Inicial
+
+* Exibição dos continentes disponíveis.
+* Navegação para páginas específicas de cada continente.
+
+### Listagem de Destinos
+
+* Exibição de destinos filtrados por continente.
+* Informações resumidas:
+
+  * Nome
+  * País
+  * Continente
+  * Preço médio
+  * Descrição
+
+### Página de Detalhes
+
+* Utilização de rotas dinâmicas do Next.js.
+* Exibição completa dos dados do destino selecionado.
+
+Exemplos:
+
+```text
+/destinos/1
+/destinos/2
+/destinos/3
+/destinos/4
+```
+
+### Componentização
+
+O projeto foi estruturado utilizando componentes reutilizáveis:
+
+#### Title
+
+Responsável pelos títulos das páginas.
+
+#### Card
+
+Exibe as informações resumidas de cada destino.
+
+#### Grid
+
+Organiza os cards em formato responsivo.
+
+#### Continente
+
+Realiza a filtragem dos destinos por continente e reutiliza os componentes Title e Grid.
+
+---
+
+## 🗂️ Modelo dos Dados
+
+Cada destino possui a seguinte estrutura:
+
+```typescript
+{
+  id: number;
+  nome: string;
+  pais: string;
+  continente: string;
+  imagem: string;
+  descricao: string;
+  precoMedio: number;
+}
+```
+
+---
+
+## 🎯 Conceitos Aplicados
+
+* Componentização
+* Props
+* Tipagem com TypeScript
+* CSS Modules
+* Renderização de listas com map()
+* Filtragem de dados com filter()
+* Rotas estáticas
+* Rotas dinâmicas
+* Organização de código
+* Reutilização de componentes
+* Responsividade
+
+---
+
+## ⚙️ Como Executar o Projeto
+
+### Clonar o repositório
+
+```bash
+git clone URL_DO_REPOSITORIO
+```
+
+### Entrar na pasta
+
+```bash
+cd portal-destinos
+```
+
+### Instalar dependências
+
+```bash
+npm install
+```
+
+### Executar o projeto
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Acessar
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📸 Telas do Sistema
 
-To learn more about Next.js, take a look at the following resources:
+Sugestão:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Página Inicial
+* Página de Continentes
+* Página de Destinos
+* Página de Detalhes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Adicione capturas de tela nesta seção.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📚 Aprendizados
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Durante o desenvolvimento deste projeto foram praticados conceitos fundamentais do ecossistema React e Next.js, incluindo componentização, tipagem com TypeScript, rotas dinâmicas, reutilização de código e organização de aplicações modernas.
+
+---
+
+## 👨‍💻 Autor
+
+John Lima
+
+Estudante de Engenharia de Software e desenvolvedor em formação.

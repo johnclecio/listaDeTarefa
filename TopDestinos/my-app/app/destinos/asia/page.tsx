@@ -1,14 +1,7 @@
-import Title from "@/app/components/Title";
+import Continente from "@/app/components/Continente";
 
+const Asia = () => {
+    return <Continente continente="Ásia" />;
+};
 
-const Asia =() =>{
-
-    return(
-
-        <>
-        <Title title ="Asia"/>
-        </>
-    );
-
-}
 export default Asia;

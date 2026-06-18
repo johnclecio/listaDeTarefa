@@ -1,5 +1,6 @@
 import { Destino } from "@/app/types/types";
 import styles from "./Card.module.css";
+import Link from "next/link";
 
 type Props = {
     destino: Destino
@@ -24,7 +25,12 @@ const Card  = ({destino}: Props) =>{
                 </p>
 
                 <p className={styles.card_description}>{descricao}</p>
+                <Link href={`/destinos/${destino.id}`}>
+                    Ver detalhes
+                </Link>
             </div>
          </div>  
     );
 }   
+
+export default Card;
