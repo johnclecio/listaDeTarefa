@@ -19,6 +19,13 @@ export default async function DestinoPage({
     <>
       <h1>{destino.nome}</h1>
       <p>{destino.descricao}</p>
+      <img
+        src={destino.imagem}
+        alt={destino.nome}
+        width={600}
+        height={400}
+      />
+            
     </>
   );
 }

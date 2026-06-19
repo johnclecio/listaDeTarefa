@@ -34,5 +34,5 @@ export const destinos = [
   imagem: "https://i.pinimg.com/736x/c8/98/ed/c898ed1bef3ccff94c7b7f1a7fe640d6.jpg",
   descricao: "Cidade histórica repleta de monumentos famosos, como o Coliseu, o Fórum Romano e a Fontana di Trevi, além de uma rica gastronomia e cultura italiana.",
   precoMedio: 6200,
-}
+},
 ];

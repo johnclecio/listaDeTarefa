@@ -13,7 +13,7 @@ const Header = () =>{
             
 
             <nav className={styles.header_nav}>
-            <Link href="/">Inicio</Link>    
+            <Link href="/">Início</Link>    
             <Link href="/destinos/asia">Ásia</Link>
             <Link href="/destinos/europa">Europa</Link>
             <Link href="/destinos/america">América</Link>
