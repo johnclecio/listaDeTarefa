@@ -6,14 +6,18 @@ type Props = {
 }
 
 const Card = ({filme} : Props) => {
-    const {id, title, imagem, description} = filme;
+    const {id, title, poster_path, overview, vote_average} = filme;
+    const resume = overview.length >= 250 ? `${overview?.substring(0,253)}...` : overview;
     return(
         <div className={styles.card} key={id} >
             <Link href={`/filmes/${id}`}>
-                <img className={styles.card_poster} src={imagem} alt={`Poster do Filme ${title}`} width={300} height={200}/>
+                <img className={styles.card_poster} 
+                src={`${process.env.NEXT_PUBLIC_TMDB_API_IMG_URL}${poster_path}`} 
+                alt={`Poster do Filme ${title}`} width={300} height={200}/>
                 <div className={styles.card_info}>
                     <h3 className={styles.card_title}>{title}</h3>
-                    <p className={styles.card_description}>{description}</p>
+                    <p className={styles.card_description}>{resume}</p>
+                    <p className={styles.card_description}>Nota: {vote_average}</p>
                 </div>
             </Link>
         </div>
